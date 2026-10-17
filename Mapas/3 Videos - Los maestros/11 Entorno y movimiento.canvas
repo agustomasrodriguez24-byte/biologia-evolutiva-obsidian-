@@ -1,0 +1,130 @@
+{
+ "nodes": [
+  {
+   "id": "n145",
+   "type": "text",
+   "text": "# La vida en interiores trajo las enfermedades modernas\n\nVolver a la tierra, al frío, al sol y al movimiento.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n146",
+   "type": "text",
+   "text": "## Entorno y movimiento\n*El entorno*\n\nLa enfermedad moderna es de entorno: vivimos adentro, aislados de la tierra, sentados y rodeados de químicos.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n147",
+   "type": "text",
+   "text": "### Tierra\n- Descalzo 30–40 min por día\n- La Tierra da electrones\n- Los zapatos de goma nos aislaron\n\n*Nutrillermo · Juan Bola*",
+   "x": 262,
+   "y": -544,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n149",
+   "type": "text",
+   "text": "### Frío\n- La grasa blanca se vuelve marrón\n- Duchas frías\n- Ánimo y autofagia\n\n*Nutrillermo · Marcos*",
+   "x": 694,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n151",
+   "type": "text",
+   "text": "### Tóxicos\n- Plásticos, cloro, cosméticos\n- Glifosato en la avena\n- Router, celular, 5G\n\n*Endika · Nutrillermo*",
+   "x": 262,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n153",
+   "type": "text",
+   "text": "### Movimiento\n- 10.000 pasos afuera es 'lo normal'\n- Fuerza, caminatas largas\n- Si tenés mucho peso, primero el taller, después la carrera\n\n*Juan Bola · Nutrillermo · Bayter*",
+   "x": -602,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n155",
+   "type": "text",
+   "text": "### Estaciones\n- Comer lo que da la estación\n- Otoño: sopa espesa de hongos, ajo y pimienta\n- Más tubérculos en invierno\n\n*Duarte · Juan Bola*",
+   "x": -1034,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n157",
+   "type": "text",
+   "text": "### Naturaleza\n- 'Vitamina N'\n- Escaparse el fin de semana\n- Sacar a los chicos de las pantallas\n\n*Juan Bola · Nutrillermo*",
+   "x": -602,
+   "y": -544,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n159",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Quitarme los zapatos es más antiinflamatorio que un paracetamol.\"\n> — **Nutrillermo**\n\n> \"No podés sanar en el mismo ambiente donde te enfermaste.\"\n> — **Juan Bola**\n\n> \"La piel es una boca más.\"\n> — **Endika Montiel**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 375,
+   "color": "5"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e148",
+   "fromNode": "n145",
+   "toNode": "n147"
+  },
+  {
+   "id": "e150",
+   "fromNode": "n145",
+   "toNode": "n149"
+  },
+  {
+   "id": "e152",
+   "fromNode": "n145",
+   "toNode": "n151"
+  },
+  {
+   "id": "e154",
+   "fromNode": "n145",
+   "toNode": "n153"
+  },
+  {
+   "id": "e156",
+   "fromNode": "n145",
+   "toNode": "n155"
+  },
+  {
+   "id": "e158",
+   "fromNode": "n145",
+   "toNode": "n157"
+  },
+  {
+   "id": "e160",
+   "fromNode": "n145",
+   "toNode": "n159"
+  }
+ ]
+}

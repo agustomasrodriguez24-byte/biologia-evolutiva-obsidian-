@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"n225","type":"text","text":"# Lo que aprendí de los videos\n\nLa mente de mis maestros, con su voz y sin filtro.\n\n**El cuerpo es el médico: sacá lo que sobra, dale lo que falta.**","x":-300,"y":-120,"width":600,"height":240,"color":"4"},
+		{"id":"n226","type":"text","text":"## La raíz\n- [[01 La idea madre.canvas|La idea madre]]\n- [[02 Los tres cuerpos.canvas|Los tres cuerpos]]","x":-180,"y":-850,"width":360,"height":160,"color":"4"},
+		{"id":"n228","type":"text","text":"## Lo que entra\n- [[03 Luz y sol.canvas|Luz y sol]]\n- [[04 Agua y sal.canvas|Agua y sal]]\n- [[05 Qué comer.canvas|Qué comer]]\n- [[06 Lo que se saca.canvas|Lo que se saca]]\n- [[07 Digestión y flora.canvas|Digestión y flora]]\n- [[08 Comer poco y de día.canvas|Comer poco y de día]]","x":676,"y":-470,"width":360,"height":280,"color":"3"},
+		{"id":"n230","type":"text","text":"## El yo\n- [[09 Mente y emociones.canvas|Mente y emociones]]\n- [[10 Temperamentos.canvas|Temperamentos]]","x":676,"y":290,"width":360,"height":160,"color":"6"},
+		{"id":"n232","type":"text","text":"## El entorno\n- [[11 Entorno y movimiento.canvas|Entorno y movimiento]]\n- [[12 La industria y la longevidad.canvas|La industria y la longevidad]]","x":-180,"y":670,"width":360,"height":160,"color":"5"},
+		{"id":"n234","type":"text","text":"## Los maestros\n- [[13 Quién dice qué.canvas|Quién dice qué]]\n- [[14 Cómo ven cada enfermedad.canvas|Cómo ven cada enfermedad]]","x":-1036,"y":290,"width":360,"height":160,"color":"4"},
+		{"id":"n236","type":"text","text":"## Nuestro sistema\n- [[Las 18 semanas.canvas|Las 18 semanas]]\n- [[Cómo alimenta todo.canvas|Cómo alimenta todo]]","x":-1036,"y":-470,"width":360,"height":160,"color":"4"},
+		{"id":"n238","type":"text","text":"### Más detalle en texto\n- [[La mente de los maestros]] (21 temas)\n- [[Marco Unani]]\n- [[Referente - Nutrillermo]]\n- [[Información madre]]","x":-300,"y":1050,"width":600,"height":220}
+	],
+	"edges":[
+		{"id":"e227","fromNode":"n225","toNode":"n226","fromSide":"top","toSide":"bottom"},
+		{"id":"e229","fromNode":"n225","toNode":"n228","fromSide":"right","toSide":"left"},
+		{"id":"e231","fromNode":"n225","toNode":"n230","fromSide":"bottom","toSide":"left"},
+		{"id":"e233","fromNode":"n225","toNode":"n232","fromSide":"bottom","toSide":"top"},
+		{"id":"e235","fromNode":"n225","toNode":"n234","fromSide":"bottom","toSide":"right"},
+		{"id":"e237","fromNode":"n225","toNode":"n236","fromSide":"top","toSide":"bottom"}
+	]
+}

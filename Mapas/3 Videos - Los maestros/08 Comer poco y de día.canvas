@@ -1,0 +1,114 @@
+{
+ "nodes": [
+  {
+   "id": "n101",
+   "type": "text",
+   "text": "# Cerrá tu puño: ese es tu estómago\n\nDominar el arte de no comer es más importante que dominar el arte de comer.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n102",
+   "type": "text",
+   "text": "## Comer poco y de día\n*Lo que entra*\n\nComemos demasiado y demasiado seguido. Comer de día, cenar temprano o no cenar, y ayunar.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n103",
+   "type": "text",
+   "text": "### El horario\n- Desayuno a los 30 min de levantarte\n- Almuerzo 13–14 h, cena hasta las 19 h\n- 12 horas comiendo, 12 sin comer\n\n*Nutrillermo*",
+   "x": -170,
+   "y": -630,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n105",
+   "type": "text",
+   "text": "### Primer paso\n- Sacar la cena\n- Cerrar la ventana de comida\n- Nada de 3 comidas + 2 colaciones\n\n*Duarte · Nutrillermo*",
+   "x": 652,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n107",
+   "type": "text",
+   "text": "### El ayuno\n- La verdadera desintoxicación\n- Autofagia: vaciar la heladera antes de comprar\n- Se llega preparado: nutrir → limpiar → ayunar\n\n*Duarte · Nutrillermo · Juan Bola*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n109",
+   "type": "text",
+   "text": "### Cómo romperlo\n- Caldo de huesos, pescado, huevo, palta\n- Nunca con azúcar, fruta ni avena\n\n*Nutrillermo*",
+   "x": -678,
+   "y": 543,
+   "width": 340,
+   "height": 190,
+   "color": "5"
+  },
+  {
+   "id": "n111",
+   "type": "text",
+   "text": "### La fórmula\n- Cetosis + ayuno ÷ sueño + sol\n- Keto y ayuno son 'armas', no rutina\n- Dos comidas: mediodía y atardecer\n\n*Nutrillermo · Juan Bola*",
+   "x": -992,
+   "y": -188,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n113",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Cerrá tu puño: ese es el tamaño de tu estómago.\"\n> — **David Duarte**\n\n> \"Si tenés que saltear una comida, que sea la cena.\"\n> — **Nutrillermo**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 280,
+   "color": "3"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e104",
+   "fromNode": "n101",
+   "toNode": "n103"
+  },
+  {
+   "id": "e106",
+   "fromNode": "n101",
+   "toNode": "n105"
+  },
+  {
+   "id": "e108",
+   "fromNode": "n101",
+   "toNode": "n107"
+  },
+  {
+   "id": "e110",
+   "fromNode": "n101",
+   "toNode": "n109"
+  },
+  {
+   "id": "e112",
+   "fromNode": "n101",
+   "toNode": "n111"
+  },
+  {
+   "id": "e114",
+   "fromNode": "n101",
+   "toNode": "n113"
+  }
+ ]
+}

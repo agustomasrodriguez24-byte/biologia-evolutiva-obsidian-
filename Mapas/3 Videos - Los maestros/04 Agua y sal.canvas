@@ -1,0 +1,115 @@
+{
+ "nodes": [
+  {
+   "id": "n43",
+   "type": "text",
+   "text": "# El mar interior\n\nTu sangre tiene unos 9 g de sal por litro. La vida es un fenómeno eléctrico, y sin sal no hay electricidad.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n44",
+   "type": "text",
+   "text": "## Agua y sal\n*Lo que entra*\n\nHidratar no es tomar agua. Somos un mar interior: toda el agua del cuerpo va con sal.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n45",
+   "type": "text",
+   "text": "### La idea\n- En el cuerpo no hay agua sola\n- La OMS te lleva a 1,6 g de sal por litro\n- Los riñones mantienen la proporción\n\n*Duarte · Sanagustín*",
+   "x": -170,
+   "y": -630,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n47",
+   "type": "text",
+   "text": "### La sed manda\n- Tomar sin sed lastima al cuerpo\n- Orina transparente = alarma, no limpieza\n- El agua embotellada sin minerales diluye\n\n*Duarte · Endika*",
+   "x": 652,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n49",
+   "type": "text",
+   "text": "### Síntomas azules\n- Caída de pelo, zumbidos, mareo\n- Uñas quebradizas, cansancio, celulitis\n- Tiroides, anemia, defensas bajas\n- Ansiedad y pánico ('son hipoglucemias')\n\n*Duarte*",
+   "x": 338,
+   "y": 513,
+   "width": 340,
+   "height": 250,
+   "color": "6"
+  },
+  {
+   "id": "n51",
+   "type": "text",
+   "text": "### El suero\n- 1 litro + 6 g de sal + limón\n- No es el suero: es la proporción del día\n- Medir una semana y subir de a poco\n- Sauna siempre con suero\n\n*Duarte · Sanagustín*",
+   "x": -678,
+   "y": 513,
+   "width": 340,
+   "height": 250,
+   "color": "4"
+  },
+  {
+   "id": "n53",
+   "type": "text",
+   "text": "### Otras formas\n- Electrolitos + B1 + shilajit\n- Agua de mar (Quinton)\n- Agua con sal marina, cítricos y menta\n\n*Nutrillermo · Endika*",
+   "x": -992,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n55",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Hidratar no es tomar agua.\"\n> — **David Duarte**\n\n> \"El agua sola no hidrata.\"\n> — **Nutrillermo**\n\n> \"Somos 9 gramos de minerales por litro.\"\n> — **Gonzalo Sanagustín**\n\n> \"No es el suero, es la proporción del día.\"\n> — **David Duarte**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 470,
+   "color": "5"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e46",
+   "fromNode": "n43",
+   "toNode": "n45"
+  },
+  {
+   "id": "e48",
+   "fromNode": "n43",
+   "toNode": "n47"
+  },
+  {
+   "id": "e50",
+   "fromNode": "n43",
+   "toNode": "n49"
+  },
+  {
+   "id": "e52",
+   "fromNode": "n43",
+   "toNode": "n51"
+  },
+  {
+   "id": "e54",
+   "fromNode": "n43",
+   "toNode": "n53"
+  },
+  {
+   "id": "e56",
+   "fromNode": "n43",
+   "toNode": "n55"
+  }
+ ]
+}

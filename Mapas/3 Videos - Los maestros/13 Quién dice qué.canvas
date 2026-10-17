@@ -1,0 +1,128 @@
+{
+ "nodes": [
+  {
+   "id": "n175",
+   "type": "text",
+   "text": "# Muchas ramas, el mismo árbol\n\nDicen lo mismo con palabras distintas.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n176",
+   "type": "text",
+   "text": "## Quién dice qué\n*Los maestros*\n\nTus maestros, lo que aporta cada uno y dónde coinciden.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n177",
+   "type": "text",
+   "text": "### David Duarte\n- La biblia: Tabiat, tres cuerpos\n- Agua y sal, azules y verdes\n- Flora, vinagre, queso azul, temperamentos\n- Producto: Programa Paso a Paso\n\n*Academia Unani*",
+   "x": 262,
+   "y": -559,
+   "width": 340,
+   "height": 250,
+   "color": "6"
+  },
+  {
+   "id": "n179",
+   "type": "text",
+   "text": "### Nutrillermo\n- Luz y sol, comida de la naturaleza\n- Azúcar, ayuno, grasa y colesterol\n- Entornología, priming, longevidad\n- Producto: Nutri Breakfast, Nutri Minerals\n\n*Referente n.º 1*",
+   "x": 694,
+   "y": -5,
+   "width": 340,
+   "height": 250,
+   "color": "3"
+  },
+  {
+   "id": "n181",
+   "type": "text",
+   "text": "### Juan Bola\n- Nutrición evolutiva (su libro)\n- Carne de pastura, sin lácteos\n- Estaciones, hígado, tejido caro\n\n*Dietista*",
+   "x": 262,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n183",
+   "type": "text",
+   "text": "### Gonzalo Sanagustín\n- Código biológico\n- Suero en vez de agua\n- Conflictos por órgano\n\n*'Mi biblia'*",
+   "x": -602,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n185",
+   "type": "text",
+   "text": "### Bayter · Endika · Félix\n- Bayter: disciplina, sin carbohidratos\n- Endika: sol, huevo, tóxicos\n- Félix: 'el filtro sos vos', meditación\n\n*Referentes*",
+   "x": -1034,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n187",
+   "type": "text",
+   "text": "### Nieto · Marcos · García Platas · Clear\n- Nieto: biorritmos\n- Marcos: comer de día, mente\n- García Platas: biotipos\n- Clear: hábitos atómicos\n\n*Referentes*",
+   "x": -602,
+   "y": -559,
+   "width": 340,
+   "height": 250
+  },
+  {
+   "id": "n189",
+   "type": "text",
+   "text": "## Dónde coinciden\n\n| Idea | Duarte | Nutrillermo | Bola | Sanagustín | Bayter | Endika | Félix | Nieto | Marcos |\n|---|---|---|---|---|---|---|---|---|---|\n| El cuerpo se cura solo | ● | ● | ● | ● | ● | ● | ● |  | ● |\n| Base animal | ● | ● | ● | ● | ● | ● | ● |  |  |\n| Fuera azúcar y harinas | ● | ● | ● | ● | ● | ● | ● |  | ● |\n| Fuera lácteos y cereales | ● |  | ● | ● | ● |  | ● |  |  |\n| Agua con sal o minerales | ● | ● |  | ● |  | ● | ● |  |  |\n| Sol y noche oscura | ● | ● | ● |  | ● | ● | ● | ● | ● |\n| Comer poco y de día | ● | ● | ● | ● | ● |  |  | ● | ● |\n| La industria nos enferma | ● | ● | ● | ● | ● | ● | ● |  | ● |\n| Naturaleza y tierra | ● | ● | ● |  | ● | ● | ● |  | ● |",
+   "x": -600,
+   "y": 1000,
+   "width": 1200,
+   "height": 498
+  }
+ ],
+ "edges": [
+  {
+   "id": "e178",
+   "fromNode": "n175",
+   "toNode": "n177"
+  },
+  {
+   "id": "e180",
+   "fromNode": "n175",
+   "toNode": "n179"
+  },
+  {
+   "id": "e182",
+   "fromNode": "n175",
+   "toNode": "n181"
+  },
+  {
+   "id": "e184",
+   "fromNode": "n175",
+   "toNode": "n183"
+  },
+  {
+   "id": "e186",
+   "fromNode": "n175",
+   "toNode": "n185"
+  },
+  {
+   "id": "e188",
+   "fromNode": "n175",
+   "toNode": "n187"
+  },
+  {
+   "id": "e190",
+   "fromNode": "n175",
+   "toNode": "n189"
+  }
+ ]
+}

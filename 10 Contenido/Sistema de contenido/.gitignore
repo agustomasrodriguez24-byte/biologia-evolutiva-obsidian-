@@ -1,0 +1,14 @@
+# El material crudo y los videos pesan: quedan en la compu, no en git
+Áreas/Contenido/Material/**/*
+!Áreas/Contenido/Material/**/
+!Áreas/Contenido/Material/Inventario.md
+*.mp4
+*.mov
+*.MOV
+*.m4v
+*.heic
+*.HEIC
+**/trabajo/
+__pycache__/
+.env
+Áreas/Contenido/herramientas/instalacion.txt

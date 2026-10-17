@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"n1","type":"text","text":"# El cuerpo es el médico\n\nSacá lo que sobra, dale lo que falta, y el cuerpo hace el resto.","x":-260,"y":-110,"width":520,"height":220,"color":"4"},
+		{"id":"n2","type":"text","text":"## La idea madre\n*La raíz*\n\nLo que une a todos tus maestros, en un solo árbol. Cada rama es un mapa propio.","x":-260,"y":-420,"width":520,"height":220},
+		{"id":"n3","type":"text","text":"### La causa real\n- La enfermedad se construye con lo de todos los días\n- No es la edad, los genes ni los nervios\n- Si la quitás y no se cura, no era la causa\n\n*Duarte · Bayter · Sanagustín*","x":-170,"y":-630,"width":340,"height":220},
+		{"id":"n5","type":"text","text":"### El diseño humano\n- Somos cazadores-recolectores\n- Osos, no vacas: estómago chico, comida densa\n- El genoma no cambió en 40.000 años\n\n*Duarte · Juan Bola · Nutrillermo*","x":652,"y":-188,"width":340,"height":220},
+		{"id":"n7","type":"text","text":"### Lo que le metimos\n- Azúcar, harinas y aceites de semillas\n- Agua sin sal, luz artificial de noche\n- Industria, pantallas, estrés sin pausa\n\n*Todos*","x":338,"y":528,"width":340,"height":220,"color":"1"},
+		{"id":"n9","type":"text","text":"### Lo que le sacamos\n- Carne, huevo, pescado y su grasa\n- Sol, tierra, frío, sueño\n- Movimiento, vínculos, propósito\n\n*Todos*","x":-678,"y":528,"width":340,"height":220,"color":"4"},
+		{"id":"n11","type":"text","text":"### Los tres cuerpos\n- Vegetal: lo que entra (hígado)\n- Animal: el movimiento (corazón)\n- Del yo: la mente (cerebro)\n\n*Duarte*","x":-992,"y":-188,"width":340,"height":220,"color":"6"},
+		{"id":"n13","type":"text","text":"## Cómo lo dicen\n\n> \"Nada ni nadie cura: se cura el cuerpo.\"\n> — **Gonzalo Sanagustín**\n\n> \"El único y verdadero médico es el Tabiat.\"\n> — **David Duarte**\n\n> \"Lo hizo la naturaleza, comételo; lo hizo el ser humano, pensátelo.\"\n> — **Nutrillermo**\n\n> \"Mi cuerpo es el que me sana.\"\n> — **Jorge Bayter**","x":-450,"y":1000,"width":900,"height":470,"color":"4"}
+	],
+	"edges":[
+		{"id":"e4","fromNode":"n1","toNode":"n3","fromSide":"top","toSide":"bottom"},
+		{"id":"e6","fromNode":"n1","toNode":"n5","fromSide":"right","toSide":"left"},
+		{"id":"e8","fromNode":"n1","toNode":"n7","fromSide":"bottom","toSide":"top"},
+		{"id":"e10","fromNode":"n1","toNode":"n9","fromSide":"bottom","toSide":"top"},
+		{"id":"e12","fromNode":"n1","toNode":"n11","fromSide":"left","toSide":"right"},
+		{"id":"e14","fromNode":"n1","toNode":"n13","fromSide":"bottom","toSide":"top"}
+	]
+}

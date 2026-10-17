@@ -1,0 +1,609 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Nutrición Evolutiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;1,400&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: estructura Promix — barra de anuncio, header ancho con menú por necesidad, hero partido oscuro/visual, franja de fuentes, tienda con pestañas, objetivos, pasos, mapa sobre banda profunda, cinta, buscador, pie con newsletter */
+:root {
+  --bg: #f5f0e6;
+  --band: #ebe3d3;
+  --surface: #fffdf8;
+  --ink: #1d221f;
+  --muted: #5f645d;
+  --line: #ddd4c2;
+  --deep: #1b2a23;
+  --deep-2: #12382a;
+  --on-deep: #f3ede1;
+  --accent: #b5601f;
+  --accent-soft: #f1dfcb;
+  --green: #1d6b4c;
+  --figure: #e2d9c7;
+  --ev-a: #1d7a45; --ev-b: #1f6f86; --ev-c: #a36a10; --ev-d: #6b5a8e; --ev-f: #a8402f;
+  --f-display: "Petrona", Georgia, "Times New Roman", serif;
+  --f-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121614; --band: #19201c; --surface: #1c2420; --ink: #ece6da; --muted: #a8aca3; --line: #2f3a34;
+  --deep: #0b100d; --deep-2: #0d2a1f; --on-deep: #efe8db; --accent: #e08a45; --accent-soft: #3a2a1c;
+  --green: #5cc79a; --figure: #26302b;
+  --ev-a: #5fc18a; --ev-b: #62b6cf; --ev-c: #e0a64a; --ev-d: #a998cf; --ev-f: #e2826f;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121614; --band: #19201c; --surface: #1c2420; --ink: #ece6da; --muted: #a8aca3; --line: #2f3a34;
+  --deep: #0b100d; --deep-2: #0d2a1f; --on-deep: #efe8db; --accent: #e08a45; --accent-soft: #3a2a1c;
+  --green: #5cc79a; --figure: #26302b;
+  --ev-a: #5fc18a; --ev-b: #62b6cf; --ev-c: #e0a64a; --ev-d: #a998cf; --ev-f: #e2826f;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 1rem; line-height: 1.55; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.1; font-weight: 600; }
+h2 { font-size: clamp(1.7rem, 3.2vw, 2.35rem); }
+p { margin: 0; }
+button { font: inherit; color: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; padding: 13px 24px; font-weight: 600; cursor: pointer; text-decoration: none; border: 1px solid transparent; font-size: .95rem; }
+.btn-cream { background: var(--on-deep); color: var(--deep); }
+.btn-outline { border-color: var(--on-deep); color: var(--on-deep); background: transparent; }
+.btn-dark { background: var(--deep); color: var(--on-deep); }
+.btn-line { border-color: var(--ink); background: transparent; color: var(--ink); }
+.btn:hover { filter: brightness(1.1); }
+
+/* anuncio + header */
+.announce { background: var(--deep); color: var(--on-deep); text-align: center; font-size: .84rem; padding: 9px 16px; font-weight: 500; }
+.announce u { text-underline-offset: 3px; }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; gap: 26px; padding-block: 14px; }
+.brand { font-family: var(--f-body); font-weight: 700; letter-spacing: .06em; font-size: 1.05rem; text-transform: uppercase; white-space: nowrap; }
+.brand sup { font-size: .55em; font-weight: 500; }
+.menu { display: flex; gap: 20px; flex-wrap: wrap; margin-right: auto; }
+.menu a { text-decoration: none; font-size: .9rem; font-weight: 500; }
+.menu a:hover { color: var(--accent); }
+.icons { display: flex; gap: 16px; align-items: center; }
+.icons svg { width: 20px; height: 20px; stroke: var(--ink); fill: none; stroke-width: 1.6; display: block; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+.hero-text { background: var(--deep); color: var(--on-deep); padding: clamp(32px, 6vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.hero-text h1 { font-family: var(--f-body); font-weight: 500; font-size: clamp(2rem, 4.2vw, 3.2rem); letter-spacing: -.01em; }
+.hero-text h1 sup { font-size: .4em; }
+.hero-text p { font-size: 1.15rem; max-width: 40ch; opacity: .9; }
+.hero-text .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.hero-visual { background: radial-gradient(120% 90% at 70% 30%, #c98b52 0%, #8a5a33 45%, #3d2b1e 100%); display: flex; align-items: center; justify-content: center; padding: 32px; position: relative; }
+.hero-visual .photo-note { position: absolute; bottom: 12px; right: 16px; font-size: .72rem; color: #f3ede1; opacity: .7; }
+.sample { background: var(--surface); color: var(--ink); border-radius: 10px; padding: 22px; width: 100%; max-width: 360px; box-shadow: 0 24px 48px -20px rgba(0,0,0,.55); display: flex; flex-direction: column; gap: 12px; }
+.sample .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.sample h3 { font-size: 1.35rem; }
+.sample .need { color: var(--muted); font-size: .9rem; margin-top: -6px; }
+.trail { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--accent); }
+.trail li { padding: 4px 0 4px 14px; font-size: .88rem; display: flex; gap: 8px; align-items: baseline; }
+.trail li span { font-family: var(--f-mono); font-size: .66rem; text-transform: uppercase; color: var(--muted); min-width: 88px; }
+
+/* franja de confianza */
+.trust { text-align: center; padding: 10px 16px; font-size: .86rem; font-weight: 600; border-bottom: 1px solid var(--line); }
+.trust .stars { color: var(--accent); letter-spacing: 2px; }
+.sources { background: var(--band); }
+.sources .wrap { display: flex; justify-content: space-between; align-items: center; gap: 18px 28px; flex-wrap: wrap; padding-block: 22px; }
+.sources span { font-family: var(--f-display); font-size: 1.3rem; font-weight: 600; opacity: .8; }
+.sources span:nth-child(2n) { font-family: var(--f-body); font-weight: 700; letter-spacing: .04em; font-size: 1.05rem; }
+
+/* evidencia */
+.ev { display: inline-flex; align-items: center; justify-content: center; min-width: 1.7em; height: 1.7em; padding: 0 .4em; border-radius: 5px; font-family: var(--f-mono); font-size: .74rem; font-weight: 500; color: #fff; flex: none; }
+.ev-A { background: var(--ev-a); } .ev-B { background: var(--ev-b); } .ev-C { background: var(--ev-c); }
+.ev-D, .ev-E { background: var(--ev-d); } .ev-F { background: var(--ev-f); }
+
+section { padding-top: 80px; }
+.center { text-align: center; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.center p { color: var(--muted); }
+
+/* tienda con pestañas */
+.tabs { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 4px; }
+.tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: 4px 2px; font-family: var(--f-display); font-size: 1.25rem; color: var(--muted); cursor: pointer; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); font-weight: 600; }
+.sub { text-align: center; color: var(--muted); margin-top: 10px; font-size: .92rem; }
+.grid { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card { display: flex; flex-direction: column; gap: 10px; text-align: center; min-width: 0; }
+.card .img { aspect-ratio: 4 / 5; max-width: 100%; background: var(--band); position: relative; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .78rem; border-radius: 4px; }
+.seal { position: absolute; top: 12px; right: 12px; width: 58px; height: 58px; border-radius: 50%; background: var(--deep); color: var(--on-deep); display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: .6rem; line-height: 1.1; font-weight: 600; }
+.seal b { font-family: var(--f-mono); font-size: 1.05rem; }
+.seal.ev-A { background: var(--ev-a); } .seal.ev-B { background: var(--ev-b); } .seal.ev-C { background: var(--ev-c); }
+.state { position: absolute; left: 12px; top: 12px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--surface); padding: 3px 8px; border-radius: 3px; }
+.card h3 { font-family: var(--f-body); font-size: .98rem; font-weight: 700; }
+.card .benefit { color: var(--muted); font-size: .84rem; margin-top: -6px; }
+.card .zones { font-size: .76rem; color: var(--green); font-weight: 600; }
+.card details { text-align: left; border-top: 1px solid var(--line); padding-top: 8px; }
+.card summary { cursor: pointer; font-weight: 600; font-size: .86rem; color: var(--accent); text-align: center; }
+.card dl { margin: 10px 0 0; display: grid; gap: 7px; font-size: .85rem; }
+.card dt { font-weight: 600; }
+.card dd { margin: 0; color: var(--muted); }
+.card.soon .img { background: transparent; border: 1px dashed var(--line); }
+.card.soon h3 { color: var(--muted); }
+.more { display: flex; justify-content: center; margin-top: 30px; }
+
+/* objetivos */
+.goals { margin-top: 26px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.goal { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.goal b { font-weight: 700; }
+.goal span { color: var(--muted); font-size: .84rem; }
+.goal:hover { border-color: var(--deep); }
+
+/* pasos */
+.steps { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.step { border-top: 2px solid var(--deep); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.step .n { font-family: var(--f-display); font-size: 2.4rem; color: var(--accent); line-height: 1; }
+.step h3 { font-size: 1.3rem; }
+.step p { color: var(--muted); }
+
+/* mapa sobre banda profunda */
+.deepband { background: var(--deep-2); color: var(--on-deep); margin-top: 80px; padding-block: 72px; }
+.deepband .center p { color: var(--on-deep); opacity: .8; }
+.deepband .eyebrow { color: var(--on-deep); opacity: .7; }
+.map { margin-top: 32px; display: grid; grid-template-columns: minmax(240px, 340px) 1fr; gap: 40px; align-items: start; }
+.figure-box { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 18px; position: sticky; top: 90px; }
+.figure-box svg { width: 100%; height: auto; max-height: 500px; display: block; }
+.body-shape { fill: rgba(243,237,225,.12); stroke: rgba(243,237,225,.3); stroke-width: 1.5; }
+.spot { cursor: pointer; }
+.spot .halo { fill: var(--accent); opacity: .22; transition: opacity .2s; }
+.spot .dot { fill: var(--accent); stroke: var(--deep-2); stroke-width: 2; }
+.spot text { font-family: var(--f-body); font-size: 9px; fill: var(--on-deep); opacity: 0; transition: opacity .2s; }
+.spot:hover text, .spot:focus text, .spot.on text { opacity: 1; }
+.spot.on .halo, .spot:hover .halo { opacity: .5; }
+.spot.on .dot { fill: var(--on-deep); }
+.spot:focus { outline: none; }
+.spot:focus-visible .dot { stroke: var(--on-deep); stroke-width: 3; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.chip { border: 1px solid rgba(243,237,225,.3); background: transparent; color: var(--on-deep); border-radius: 99px; padding: 5px 12px; font-size: .85rem; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--on-deep); color: var(--deep-2); border-color: var(--on-deep); }
+.panel { min-width: 0; }
+.panel h3 { font-size: 2.3rem; }
+.panel .need { margin-top: 8px; font-size: 1.12rem; max-width: 58ch; opacity: .92; }
+.tree { margin-top: 24px; border-left: 2px solid var(--accent); display: flex; flex-direction: column; gap: 18px; }
+.branch { position: relative; padding-left: 26px; }
+.branch::before { content: ""; position: absolute; left: 0; top: .85em; width: 18px; border-top: 2px solid var(--accent); }
+.branch .kind { font-family: var(--f-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; opacity: .65; }
+.branch .ttl { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 1.05rem; margin-top: 2px; }
+.branch p { opacity: .78; margin-top: 4px; max-width: 62ch; }
+.value { margin-top: 26px; background: var(--on-deep); color: var(--deep); border-radius: 8px; padding: 20px 22px; }
+.value .eyebrow { color: var(--accent); opacity: 1; }
+.value p { margin-top: 8px; font-family: var(--f-display); font-size: 1.18rem; line-height: 1.5; max-width: 60ch; }
+.building { margin-top: 24px; border: 1px dashed rgba(243,237,225,.35); border-radius: 8px; padding: 18px; opacity: .85; }
+.prod-links { margin-top: 18px; font-size: .92rem; }
+.prod-links a { color: var(--on-deep); font-weight: 600; text-underline-offset: 3px; }
+
+/* cinta */
+.marquee { border-bottom: 1px solid var(--line); overflow: hidden; padding-block: 18px; background: var(--bg); }
+.marquee .track { display: flex; width: max-content; animation: slide 40s linear infinite; }
+.marquee span { font-size: 1.25rem; white-space: nowrap; padding-right: .5rem; }
+.marquee span b { color: var(--accent); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* buscador */
+.search { margin-top: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: clamp(20px, 4vw, 36px); }
+.search form { display: flex; gap: 8px; flex-wrap: wrap; }
+.search input { flex: 1 1 260px; min-width: 0; font: inherit; padding: 13px 16px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
+.examples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .86rem; color: var(--muted); }
+.examples .chip { border-color: var(--line); color: var(--ink); }
+.results { margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
+.result { border-top: 1px solid var(--line); padding-top: 12px; }
+.result .ttl { display: flex; gap: 8px; align-items: center; font-weight: 600; }
+.result .meta { font-family: var(--f-mono); font-size: .7rem; color: var(--muted); margin-top: 2px; }
+.result p { color: var(--muted); margin-top: 6px; max-width: 72ch; }
+.paywall { margin-top: 14px; font-size: .86rem; color: var(--muted); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.lock { font-family: var(--f-mono); font-size: .7rem; background: var(--deep); color: var(--on-deep); border-radius: 3px; padding: 3px 8px; }
+
+/* pie */
+footer { margin-top: 80px; border-top: 1px solid var(--line); }
+footer .cols { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 28px; padding-block: 40px 28px; }
+footer h4 { margin: 0 0 10px; font-size: .9rem; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .86rem; color: var(--muted); }
+footer form { display: flex; margin-top: 10px; border: 1px solid var(--ink); border-radius: 4px; max-width: 340px; }
+footer input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 11px 12px; font: inherit; color: var(--ink); }
+footer form button { border: 0; background: transparent; padding: 0 14px; cursor: pointer; font-size: 1.1rem; }
+.newsnote { font-size: .86rem; color: var(--muted); }
+.legal { border-top: 1px solid var(--line); padding-block: 18px 40px; font-size: .76rem; color: var(--muted); display: grid; gap: 4px; }
+
+@media (max-width: 960px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .goals { grid-template-columns: repeat(2, 1fr); }
+  footer .cols { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .menu { display: none; }
+  header.top .wrap { justify-content: space-between; }
+  .hero { grid-template-columns: 1fr; }
+  .steps, .map { grid-template-columns: 1fr; }
+  .figure-box { position: static; }
+  .figure-box svg { max-height: 340px; }
+}
+@media (max-width: 460px) {
+  .grid, .goals, footer .cols { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .marquee .track { animation: none; } }
+</style>
+
+<div class="announce">Ficha de valor y video de regalo en cada compra. <u>Ver la tienda</u></div>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand">Nutrición Evolutiva<sup>®</sup></span>
+    <nav class="menu" aria-label="Comprar por necesidad">
+      <a href="#tienda" data-need="dormir">Dormir</a>
+      <a href="#tienda" data-need="nutricion">Nutrición</a>
+      <a href="#tienda" data-need="fuerza">Fuerza</a>
+      <a href="#tienda" data-need="digestion">Digestión</a>
+      <a href="#mapa">El mapa</a>
+      <a href="#buscador">Buscador</a>
+    </nav>
+    <div class="icons" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-5.5 7.5-5.5s6.3 1.5 7.5 5.5"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12.5H6z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Nada sin una razón biológica<sup>™</sup></h1>
+    <p>Alimentos y herramientas elegidos por lo que tu cuerpo necesita, con la evidencia a la vista.</p>
+    <div class="ctas">
+      <a class="btn btn-cream" href="#tienda">Ver la tienda</a>
+      <a class="btn btn-outline" href="#mapa">Explorar el mapa</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="sample" aria-label="Ejemplo de ficha de producto">
+      <div class="top"><span class="eyebrow">Así se ve cada producto</span><span class="ev ev-C" title="Evidencia C">C</span></div>
+      <h3>Lentes ámbar nocturnos</h3>
+      <p class="need">Para no enviarle al cerebro una señal de día antes de dormir.</p>
+      <ol class="trail">
+        <li><span>Zona</span>Ojos · Cerebro</li>
+        <li><span>Concepto</span>Ritmo circadiano</li>
+        <li><span>Mecanismo</span>Luz azul y melatonina</li>
+        <li><span>Protocolo</span>Reducción de luz nocturna</li>
+        <li><span>Valor</span>Ficha + video de regalo</li>
+      </ol>
+    </div>
+    <span class="photo-note">Acá va tu foto de producto</span>
+  </div>
+</div>
+
+<div class="trust"><span class="stars">A · B · C · D · E · F</span>&nbsp;&nbsp;Cada afirmación con su nivel de evidencia</div>
+<div class="sources" aria-label="Fuentes que usamos">
+  <div class="wrap">
+    <span>OMS</span><span>NIH · ODS</span><span>Cochrane</span><span>FAO</span><span>USDA</span><span>NCCIH</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="tienda" style="padding-top:64px">
+    <div class="tabs" role="tablist" aria-label="Tienda">
+      <button class="tab" role="tab" type="button" data-need="todas" aria-selected="true">Todo</button>
+      <button class="tab" role="tab" type="button" data-need="dormir" aria-selected="false">Dormir</button>
+      <button class="tab" role="tab" type="button" data-need="nutricion" aria-selected="false">Nutrición</button>
+      <button class="tab" role="tab" type="button" data-need="fuerza" aria-selected="false">Fuerza</button>
+      <button class="tab" role="tab" type="button" data-need="digestion" aria-selected="false">Digestión</button>
+    </div>
+    <p class="sub">Comprá por lo que tu cuerpo necesita</p>
+    <div class="grid" id="catalog"></div>
+    <div class="more"><a class="btn btn-line" href="#mapa">Ver todo alineado en el mapa</a></div>
+  </section>
+
+  <section id="objetivos">
+    <div class="center">
+      <p class="eyebrow">Empezá por acá</p>
+      <h2>¿Qué querés mejorar?</h2>
+      <p>Elegí un objetivo y te mostramos dónde empieza todo en tu cuerpo.</p>
+    </div>
+    <div class="goals">
+      <button class="goal" type="button" data-z="ojos"><b>Dormir mejor</b><span>Luz, ritmo circadiano y noche</span></button>
+      <button class="goal" type="button" data-z="corazon"><b>Cuidar mi presión</b><span>Sodio, agua y movimiento</span></button>
+      <button class="goal" type="button" data-z="musculos"><b>Ganar fuerza</b><span>Estímulo y proteína</span></button>
+      <button class="goal" type="button" data-z="intestino"><b>Mejorar mi digestión</b><span>Absorción y microbiota</span></button>
+      <button class="goal" type="button" data-z="higado"><b>Comer más nutritivo</b><span>Densidad y biodisponibilidad</span></button>
+    </div>
+  </section>
+
+  <section>
+    <div class="center">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>De tu biología a tu carrito, en tres pasos</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Entendé tu cuerpo</h3><p>El mapa muestra qué necesita cada zona y por qué, con el nivel de evidencia de cada afirmación.</p></div>
+      <div class="step"><span class="n">2</span><h3>Aplicá un protocolo</h3><p>Hábitos concretos: qué hacer, cuándo y cómo medirlo. Muchos no cuestan nada.</p></div>
+      <div class="step"><span class="n">3</span><h3>Sumá la herramienta justa</h3><p>Recién ahí, el producto alineado, con su ficha de valor y un video de regalo para usarlo bien.</p></div>
+    </div>
+  </section>
+</div>
+
+<div class="deepband" id="mapa">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">El mapa</p>
+      <h2>Tocá una zona del cuerpo</h2>
+      <p>Cada zona despliega lo que necesita, cómo funciona, qué podés hacer y qué productos están alineados.</p>
+    </div>
+    <div class="map">
+      <div class="figure-box">
+        <svg viewBox="0 0 200 430" role="group" aria-label="Figura humana con zonas">
+          <g class="body-shape">
+            <circle cx="100" cy="46" r="30"/>
+            <rect x="90" y="72" width="20" height="18" rx="4"/>
+            <path d="M58 92 Q100 82 142 92 L150 150 Q146 200 136 236 L64 236 Q54 200 50 150 Z"/>
+            <path d="M58 94 Q40 100 36 130 L26 214 Q24 226 33 228 Q40 228 42 216 L56 140 Z"/>
+            <path d="M142 94 Q160 100 164 130 L174 214 Q176 226 167 228 Q160 228 158 216 L144 140 Z"/>
+            <path d="M64 234 L98 234 L96 400 Q96 414 84 414 Q72 414 74 400 L66 300 Z"/>
+            <path d="M102 234 L136 234 L134 300 L126 400 Q128 414 116 414 Q104 414 104 400 Z"/>
+          </g>
+          <g id="spots"></g>
+        </svg>
+        <div class="chips" id="zoneChips" aria-label="Zonas"></div>
+      </div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee" aria-label="Lo que no entra a la tienda">
+  <div class="track">
+    <span>Sin azúcar añadida. Sin aceites refinados. Sin colorantes. Sin ultraprocesados. <b>Sin promesas sin evidencia.</b>&nbsp;</span>
+    <span aria-hidden="true">Sin azúcar añadida. Sin aceites refinados. Sin colorantes. Sin ultraprocesados. <b>Sin promesas sin evidencia.</b>&nbsp;</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="buscador">
+    <div class="center">
+      <p class="eyebrow">Buscador para suscriptores</p>
+      <h2>Preguntale al sistema</h2>
+      <p>Las respuestas salen solo de notas revisadas, con su fuente y su nivel de evidencia.</p>
+    </div>
+    <div class="search">
+      <form id="searchForm" role="search">
+        <label for="q" style="position:absolute;left:-9999px">Tu pregunta</label>
+        <input id="q" name="q" type="search" value="¿Cómo mejoro mi sueño?" autocomplete="off">
+        <button class="btn btn-dark" type="submit">Buscar</button>
+      </form>
+      <div class="examples">Probá:
+        <button class="chip" type="button" data-q="luz azul pantallas">luz azul pantallas</button>
+        <button class="chip" type="button" data-q="sal presión">sal y presión</button>
+        <button class="chip" type="button" data-q="huevo colina">huevo y colina</button>
+        <button class="chip" type="button" data-q="ejercicio semanal">ejercicio semanal</button>
+      </div>
+      <div class="results" id="results"></div>
+      <p class="paywall"><span class="lock">SUSCRIPCIÓN</span> En la versión real, Claude redacta la respuesta a partir de estas notas. Acá se muestran las notas encontradas.</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Recibí el valor</h4>
+        <p class="newsnote">Protocolos, nuevos productos y videos, una vez por semana.</p>
+        <form id="news">
+          <label for="email" style="position:absolute;left:-9999px">Tu email</label>
+          <input id="email" type="email" placeholder="Tu email">
+          <button type="submit" aria-label="Suscribirme">→</button>
+        </form>
+        <p class="newsnote" id="newsMsg" hidden>Prototipo: el formulario todavía no envía datos.</p>
+      </div>
+      <div><h4>Tienda</h4><ul><li>Dormir</li><li>Nutrición</li><li>Fuerza</li><li>Digestión</li></ul></div>
+      <div><h4>El sistema</h4><ul><li>El mapa</li><li>Niveles de evidencia</li><li>Criterios de la tienda</li><li>Buscador</li></ul></div>
+      <div><h4>Ayuda</h4><ul><li>Contacto</li><li>Envíos</li><li>Suscripción</li><li>Preguntas frecuentes</li></ul></div>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <span>© 2026 Nutrición Evolutiva. Prototipo de estructura: el contenido sale del vault del sistema y las notas en borrador no se publican.</span>
+    <span>Esta información es educativa y no reemplaza la consulta con un profesional de la salud. Los productos no están destinados a diagnosticar, tratar ni curar enfermedades.</span>
+  </div>
+</footer>
+
+<script>
+const ZONES = [
+  { id: "cerebro", name: "Cerebro", x: 100, y: 32,
+    need: "Necesita saber qué hora es para ordenar el sueño, la energía y las hormonas a lo largo del día.",
+    branches: [
+      { kind: "Concepto", t: "Ritmo circadiano", ev: "A", p: "Un reloj central en el hipotálamo marca un ciclo de unas 24 horas y se pone en hora cada día con la luz." },
+      { kind: "Nutriente", t: "Colina", ev: "A", p: "Nutriente esencial que el cuerpo usa para formar membranas y el neurotransmisor acetilcolina." },
+      { kind: "Protocolo", t: "Luz matutina", ev: "C", p: "Salir a la luz natural en la primera hora después de despertar." }
+    ],
+    value: "Tu cerebro no adivina la hora: la lee de la luz. Darle luz fuerte a la mañana y poca a la noche es la forma más simple de ordenar tu reloj interno.",
+    products: ["lentes", "huevo"] },
+  { id: "ojos", name: "Ojos", x: 88, y: 54,
+    need: "Son el sensor de luz del reloj interno: le informan al cerebro si es de día o de noche.",
+    branches: [
+      { kind: "Mecanismo", t: "Señalización lumínica circadiana", ev: "A", p: "Células especiales de la retina detectan la luz azul y avisan al reloj central. De noche, esa señal frena la melatonina." },
+      { kind: "Intervención", t: "Reducción de luz nocturna", ev: "B", p: "Menos luz total y luz más cálida en las horas previas a dormir." },
+      { kind: "Intervención", t: "Exposición lumínica matutina", ev: "B", p: "Luz intensa, idealmente exterior, al empezar el día." }
+    ],
+    value: "Lo que más pesa es cuánta luz recibís y a qué hora. A la noche, bajá las luces; a la mañana, salí afuera. Los filtros ayudan, pero son lo último de la lista.",
+    products: ["lentes"] },
+  { id: "corazon", name: "Corazón", x: 112, y: 128,
+    need: "Necesita una presión arterial estable, que depende en parte del equilibrio de sodio y agua.",
+    branches: [
+      { kind: "Concepto", t: "Sodio", ev: "A", p: "Una ingesta alta de sodio se asocia con presión arterial más alta. La OMS recomienda menos de 2 g de sodio por día (5 g de sal)." },
+      { kind: "Fuente", t: "OMS · Actividad física", ev: "A", p: "150 a 300 minutos semanales de actividad aeróbica moderada, o 75 a 150 de vigorosa." }
+    ],
+    value: "La mayor parte de la sal que comemos viene de alimentos procesados, no del salero. Cocinar con alimentos reales es la primera herramienta para tu presión.",
+    products: [] },
+  { id: "higado", name: "Hígado", x: 84, y: 164,
+    need: "Procesa grasas, guarda energía y necesita colina para exportar las grasas que fabrica.",
+    branches: [
+      { kind: "Nutriente", t: "Colina", ev: "A", p: "Participa en el metabolismo de las grasas en el hígado. Ingesta adecuada en adultos: 425 a 550 mg por día." },
+      { kind: "Alimento", t: "Huevo", ev: "A", p: "Dos huevos aportan cerca de la mitad de la colina diaria de referencia, en una forma que el cuerpo usa directamente." }
+    ],
+    value: "La colina es un nutriente poco conocido y fácil de quedarse corto. El huevo es una de sus fuentes más densas.",
+    products: ["huevo"] },
+  { id: "rinones", name: "Riñones", x: 118, y: 186,
+    need: "Regulan cuánta agua y cuánto sodio retiene el cuerpo, y con eso el volumen de sangre.",
+    branches: [
+      { kind: "Concepto", t: "Sodio", ev: "A", p: "Principal electrolito fuera de las células. Junto con el agua define el volumen y la concentración de los líquidos del cuerpo." }
+    ],
+    value: "Hidratarse no es solo tomar agua: el cuerpo maneja agua y sodio juntos. Lo que necesitás cambia si transpirás mucho.",
+    products: [] },
+  { id: "intestino", name: "Intestino", x: 100, y: 214,
+    need: "Libera y absorbe los nutrientes de los alimentos. De él depende cuánto de lo que comés llega a usarse.",
+    branches: [],
+    building: "Zona en construcción: microbiota, digestión, absorción, motilidad y permeabilidad intestinal.",
+    value: "No importa solo cuánto nutriente tiene un alimento, sino cuánto llega a absorberse. Por eso cada alimento de la tienda se evalúa por su valor nutricional efectivo.",
+    products: [] },
+  { id: "musculos", name: "Músculos", x: 82, y: 300,
+    need: "Necesitan estímulo para mantenerse: fuerza al menos dos veces por semana y movimiento diario.",
+    branches: [
+      { kind: "Fuente", t: "OMS · Actividad física", ev: "A", p: "Fortalecimiento muscular al menos 2 días por semana, además de la actividad aeróbica." },
+      { kind: "Alimento", t: "Huevo", ev: "A", p: "Proteína de alta calidad y alta digestibilidad cuando está cocido." }
+    ],
+    value: "El músculo se construye con estímulo y con proteína. Sin el primero, la segunda no alcanza.",
+    products: ["huevo"] }
+];
+
+const PRODUCTS = [
+  { id: "lentes", name: "Lentes ámbar nocturnos", state: "Con condiciones", needs: ["dormir"], zones: ["ojos", "cerebro"],
+    benefit: "Menos señal de día antes de dormir", promise: "C",
+    ficha: [
+      ["Para qué te sirve", "Reducen la luz azul que llega a tus ojos en las horas antes de dormir."],
+      ["Cómo encaja en tu biología", "La luz azul nocturna le dice al cerebro que todavía es de día y frena la melatonina."],
+      ["Cómo usarlo", "2 a 3 horas antes de dormir: luces bajas y cálidas, y los lentes si seguís con pantallas. A la mañana, luz natural."],
+      ["Qué podés esperar y qué no", "Son un apoyo dentro de un ritual nocturno. La evidencia sobre el sueño todavía no es concluyente, y no reducen el cansancio visual con la computadora."],
+      ["Para quién no es", "No usarlos para manejar de noche."]
+    ] },
+  { id: "huevo", name: "Huevos", state: "En evaluación", needs: ["nutricion", "fuerza"], zones: ["higado", "musculos", "cerebro"],
+    benefit: "Proteína completa y colina", promise: "A",
+    ficha: [
+      ["Para qué te sirve", "Proteína completa, colina, vitamina B12, selenio y riboflavina en un solo alimento."],
+      ["Cómo encaja en tu biología", "Sus nutrientes vienen en formas que el cuerpo absorbe y usa directamente."],
+      ["Cómo usarlo", "Cocidos: duros, pasados por agua, poché o revueltos suaves. La cocción mejora la digestión de la proteína."],
+      ["Qué podés esperar y qué no", "Es uno de los alimentos más densos en nutrientes. No aporta hierro aprovechable: para eso hacen falta otras fuentes."],
+      ["Para quién no es", "Personas con alergia al huevo."]
+    ] }
+];
+const SOON = [
+  { need: "digestion", label: "Digestión", text: "Próximamente: alimento evaluado para el intestino" },
+  { need: "nutricion", label: "Nutrición", text: "Próximamente: siguiente alimento del núcleo" },
+  { need: "dormir", label: "Dormir", text: "Próximamente: herramienta para el ritual nocturno" }
+];
+
+const NOTES = [
+  { t: "Ritmo circadiano", tipo: "Concepto", ev: "A", z: "Cerebro", txt: "reloj interno 24 horas sueño vigilia luz melatonina cortisol hipotálamo dormir", p: "Oscilación de unas 24 horas que ordena el sueño, la temperatura y las hormonas. Se sincroniza cada día con la luz." },
+  { t: "Señalización lumínica circadiana", tipo: "Mecanismo", ev: "A", z: "Ojos", txt: "luz azul retina melanopsina melatonina noche pantallas sueño", p: "La luz azul activa células de la retina que avisan al reloj central. De noche, frena la melatonina y atrasa el reloj." },
+  { t: "Reducción de luz nocturna", tipo: "Intervención", ev: "B", z: "Ojos", txt: "noche pantallas luz azul dormir sueño lentes luces cálidas", p: "Menos luz total, luz cálida y menos pantallas antes de dormir. Los lentes con filtro son un apoyo con evidencia no concluyente para el sueño." },
+  { t: "Protocolo · Luz matutina", tipo: "Protocolo", ev: "C", z: "Cerebro", txt: "mañana sol luz despertar sueño dormir mejorar", p: "Luz natural en la primera hora después de despertar. No hay una dosis consensuada; 10 a 30 minutos es una práctica habitual sin validación directa." },
+  { t: "Lentes con filtro de luz azul", tipo: "Producto", ev: "C", z: "Ojos", txt: "lentes anteojos luz azul pantallas vista cansancio visual sueño", p: "Una revisión Cochrane de 2023 encontró que probablemente no reducen el cansancio visual con pantallas y que su efecto sobre el sueño no es concluyente." },
+  { t: "Sodio", tipo: "Concepto", ev: "A", z: "Riñones · Corazón", txt: "sal sodio presión arterial hidratación electrolitos riñón", p: "La OMS recomienda menos de 2 g de sodio por día (5 g de sal). Una ingesta alta se asocia con presión arterial más alta." },
+  { t: "Colina", tipo: "Nutriente", ev: "A", z: "Hígado · Cerebro", txt: "colina huevo hígado grasas acetilcolina memoria", p: "Nutriente esencial. Ingesta adecuada en adultos: 550 mg por día en hombres y 425 mg en mujeres." },
+  { t: "Huevo", tipo: "Alimento", ev: "A", z: "Hígado · Músculos", txt: "huevo proteína colina b12 selenio alimento", p: "Alta densidad nutricional. Dos huevos aportan cerca de la mitad de la colina de referencia y proteína de alta calidad." },
+  { t: "OMS · Actividad física", tipo: "Fuente", ev: "A", z: "Músculos · Corazón", txt: "ejercicio actividad física semanal minutos fuerza caminar entrenar", p: "Adultos: 150 a 300 minutos semanales de actividad moderada o 75 a 150 de vigorosa, y fuerza al menos 2 días por semana." }
+];
+
+const ev = l => `<span class="ev ev-${l}" title="Evidencia ${l}">${l}</span>`;
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const zoneName = id => ZONES.find(z => z.id === id).name;
+
+let current = "ojos";
+let need = "todas";
+
+function renderSpots() {
+  document.getElementById("spots").innerHTML = ZONES.map(z => `
+    <g class="spot${z.id === current ? " on" : ""}" data-z="${z.id}" tabindex="0" role="button" aria-label="${z.name}" transform="translate(${z.x} ${z.y})">
+      <circle class="halo" r="11"/><circle class="dot" r="4.5"/>
+      <text x="${z.x > 100 ? 14 : -14}" y="3" text-anchor="${z.x > 100 ? "start" : "end"}">${z.name}</text>
+    </g>`).join("");
+  document.getElementById("zoneChips").innerHTML = ZONES.map(z =>
+    `<button class="chip" type="button" data-z="${z.id}" aria-pressed="${z.id === current}">${z.name}</button>`).join("");
+}
+
+function renderPanel() {
+  const z = ZONES.find(x => x.id === current);
+  const prods = PRODUCTS.filter(p => z.products.includes(p.id));
+  document.getElementById("panel").innerHTML = `
+    <p class="eyebrow">Zona</p>
+    <h3>${z.name}</h3>
+    <p class="need">${z.need}</p>
+    ${z.branches.length ? `<div class="tree">${z.branches.map(b => `
+      <div class="branch">
+        <div class="kind">${b.kind}</div>
+        <div class="ttl">${ev(b.ev)} ${b.t}</div>
+        <p>${b.p}</p>
+      </div>`).join("")}</div>` : ""}
+    ${z.building ? `<div class="building">${z.building}</div>` : ""}
+    <div class="value"><p class="eyebrow">Valor para vos</p><p>${z.value}</p></div>
+    <p class="prod-links">${prods.length
+      ? `Productos alineados: ${prods.map(p => `<a href="#tienda">${p.name}</a>`).join(" · ")}`
+      : `<span style="opacity:.75">Todavía no hay productos alineados a esta zona.</span>`}</p>`;
+}
+
+function select(id, scroll) {
+  current = id; renderSpots(); renderPanel();
+  if (scroll) document.getElementById("mapa").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}
+
+function renderCatalog() {
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.need === need));
+  const list = PRODUCTS.filter(p => need === "todas" || p.needs.includes(need));
+  const soon = SOON.filter(s => need === "todas" || s.need === need).slice(0, Math.max(0, 4 - list.length));
+  document.getElementById("catalog").innerHTML = list.map(p => `
+    <article class="card">
+      <div class="img">
+        <span class="state">${p.state}</span>
+        <span class="seal ev-${p.promise}"><b>${p.promise}</b>evidencia</span>
+        <span>Foto del producto</span>
+      </div>
+      <h3>${p.name}</h3>
+      <p class="benefit">${p.benefit}</p>
+      <p class="zones">${p.zones.map(zoneName).join(" · ")}</p>
+      <details>
+        <summary>Ficha de valor</summary>
+        <dl>${p.ficha.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+      </details>
+    </article>`).join("") + soon.map(s => `
+    <article class="card soon">
+      <div class="img"><span>${s.text}</span></div>
+      <h3>${s.label}</h3>
+      <p class="benefit">Pasando por el filtro del sistema</p>
+    </article>`).join("");
+}
+
+document.addEventListener("click", e => {
+  const s = e.target.closest("[data-z]");
+  if (s) { select(s.dataset.z, s.classList.contains("goal")); return; }
+  const n = e.target.closest("[data-need]");
+  if (n) { need = n.dataset.need; renderCatalog(); }
+  const q = e.target.closest("[data-q]");
+  if (q) { document.getElementById("q").value = q.dataset.q; search(q.dataset.q); }
+});
+document.addEventListener("keydown", e => {
+  const s = e.target.closest && e.target.closest(".spot");
+  if (s && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); select(s.dataset.z); }
+});
+
+function search(q) {
+  const words = norm(q).split(/\W+/).filter(w => w.length > 2);
+  const scored = NOTES.map(n => {
+    const hay = norm(n.t + " " + n.txt + " " + n.p);
+    return { n, s: words.reduce((a, w) => a + (hay.includes(w.slice(0, 5)) ? 1 : 0), 0) };
+  }).filter(r => r.s > 0).sort((a, b) => b.s - a.s || a.n.ev.localeCompare(b.n.ev)).slice(0, 4);
+  document.getElementById("results").innerHTML = scored.length
+    ? scored.map(({ n }) => `
+      <div class="result">
+        <div class="ttl">${ev(n.ev)} ${n.t}</div>
+        <div class="meta">${n.tipo} · ${n.z}</div>
+        <p>${n.p}</p>
+      </div>`).join("")
+    : `<p style="color:var(--muted)">No hay notas publicadas sobre "${esc(q)}" todavía. En la versión real, la pregunta queda registrada para investigar.</p>`;
+}
+document.getElementById("searchForm").addEventListener("submit", e => { e.preventDefault(); search(document.getElementById("q").value); });
+document.getElementById("news").addEventListener("submit", e => { e.preventDefault(); document.getElementById("newsMsg").hidden = false; });
+
+renderSpots(); renderPanel(); renderCatalog(); search(document.getElementById("q").value);
+</script>
+
+</body></html>

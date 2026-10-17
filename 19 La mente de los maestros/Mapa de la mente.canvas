@@ -1,0 +1,688 @@
+{
+ "nodes": [
+  {
+   "id": "hub",
+   "type": "file",
+   "file": "19 La mente de los maestros/La mente de los maestros.md",
+   "x": -190,
+   "y": -60,
+   "width": 380,
+   "height": 120,
+   "color": "6"
+  },
+  {
+   "id": "t0",
+   "type": "file",
+   "file": "19 La mente de los maestros/El cuerpo es el médico.md",
+   "x": -149,
+   "y": -945,
+   "width": 300,
+   "height": 90,
+   "color": "6"
+  },
+  {
+   "id": "t1",
+   "type": "file",
+   "file": "19 La mente de los maestros/La causa real.md",
+   "x": 115,
+   "y": -905,
+   "width": 300,
+   "height": 90,
+   "color": "6"
+  },
+  {
+   "id": "t2",
+   "type": "file",
+   "file": "19 La mente de los maestros/El diseño humano.md",
+   "x": 356,
+   "y": -788,
+   "width": 300,
+   "height": 90,
+   "color": "6"
+  },
+  {
+   "id": "t3",
+   "type": "file",
+   "file": "19 La mente de los maestros/Luz y sol.md",
+   "x": 553,
+   "y": -606,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t4",
+   "type": "file",
+   "file": "19 La mente de los maestros/Agua y sal.md",
+   "x": 687,
+   "y": -373,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t5",
+   "type": "file",
+   "file": "19 La mente de los maestros/Comida densa.md",
+   "x": 747,
+   "y": -112,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t6",
+   "type": "file",
+   "file": "19 La mente de los maestros/Azúcar y carbohidratos.md",
+   "x": 727,
+   "y": 155,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t7",
+   "type": "file",
+   "file": "19 La mente de los maestros/Harinas, cereales y lácteos.md",
+   "x": 629,
+   "y": 404,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t8",
+   "type": "file",
+   "file": "19 La mente de los maestros/Frutas y verduras según los maestros.md",
+   "x": 462,
+   "y": 614,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t9",
+   "type": "file",
+   "file": "19 La mente de los maestros/Grasa y colesterol.md",
+   "x": 240,
+   "y": 765,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t10",
+   "type": "file",
+   "file": "19 La mente de los maestros/Digestión, bilis y flora.md",
+   "x": -15,
+   "y": 844,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t11",
+   "type": "file",
+   "file": "19 La mente de los maestros/Comer poco, de día y ayunar.md",
+   "x": -284,
+   "y": 844,
+   "width": 300,
+   "height": 90,
+   "color": "4"
+  },
+  {
+   "id": "t12",
+   "type": "file",
+   "file": "19 La mente de los maestros/Movimiento.md",
+   "x": -540,
+   "y": 765,
+   "width": 300,
+   "height": 90,
+   "color": "3"
+  },
+  {
+   "id": "t13",
+   "type": "file",
+   "file": "19 La mente de los maestros/Entorno, tierra y tóxicos.md",
+   "x": -762,
+   "y": 614,
+   "width": 300,
+   "height": 90,
+   "color": "5"
+  },
+  {
+   "id": "t14",
+   "type": "file",
+   "file": "19 La mente de los maestros/Estaciones y naturaleza.md",
+   "x": -929,
+   "y": 405,
+   "width": 300,
+   "height": 90,
+   "color": "5"
+  },
+  {
+   "id": "t15",
+   "type": "file",
+   "file": "19 La mente de los maestros/Mente, emociones y conflictos.md",
+   "x": -1027,
+   "y": 155,
+   "width": 300,
+   "height": 90,
+   "color": "2"
+  },
+  {
+   "id": "t16",
+   "type": "file",
+   "file": "19 La mente de los maestros/Temperamentos y biotipos.md",
+   "x": -1047,
+   "y": -112,
+   "width": 300,
+   "height": 90,
+   "color": "2"
+  },
+  {
+   "id": "t17",
+   "type": "file",
+   "file": "19 La mente de los maestros/La industria y el sistema.md",
+   "x": -987,
+   "y": -373,
+   "width": 300,
+   "height": 90,
+   "color": "1"
+  },
+  {
+   "id": "t18",
+   "type": "file",
+   "file": "19 La mente de los maestros/Longevidad.md",
+   "x": -853,
+   "y": -606,
+   "width": 300,
+   "height": 90,
+   "color": "1"
+  },
+  {
+   "id": "t19",
+   "type": "file",
+   "file": "19 La mente de los maestros/Hábitos y disciplina.md",
+   "x": -656,
+   "y": -788,
+   "width": 300,
+   "height": 90,
+   "color": "1"
+  },
+  {
+   "id": "t20",
+   "type": "file",
+   "file": "19 La mente de los maestros/Cómo ven cada enfermedad.md",
+   "x": -415,
+   "y": -905,
+   "width": 300,
+   "height": 90,
+   "color": "1"
+  },
+  {
+   "id": "m0",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - David Duarte.md",
+   "x": -139,
+   "y": -1740,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m1",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Nutrillermo.md",
+   "x": 650,
+   "y": -1545,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m2",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Juan Bola.md",
+   "x": 1259,
+   "y": -1005,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m3",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Gonzalo Sanagustín.md",
+   "x": 1547,
+   "y": -244,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m4",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Jorge Bayter.md",
+   "x": 1449,
+   "y": 562,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m5",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Endika Montiel.md",
+   "x": 987,
+   "y": 1232,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m6",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Félix da Charry.md",
+   "x": 266,
+   "y": 1610,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m7",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Claudio Nieto.md",
+   "x": -546,
+   "y": 1610,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m8",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Marcos.md",
+   "x": -1267,
+   "y": 1232,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m9",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Rodrigo García Platas.md",
+   "x": -1729,
+   "y": 562,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m10",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Tribaluri.md",
+   "x": -1827,
+   "y": -244,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m11",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - James Clear.md",
+   "x": -1539,
+   "y": -1005,
+   "width": 280,
+   "height": 80
+  },
+  {
+   "id": "m12",
+   "type": "file",
+   "file": "19 La mente de los maestros/Maestro - Cuentas de Instagram.md",
+   "x": -930,
+   "y": -1545,
+   "width": 280,
+   "height": 80
+  }
+ ],
+ "edges": [
+  {
+   "id": "e0",
+   "fromNode": "hub",
+   "toNode": "t0"
+  },
+  {
+   "id": "e1",
+   "fromNode": "hub",
+   "toNode": "t1"
+  },
+  {
+   "id": "e2",
+   "fromNode": "hub",
+   "toNode": "t2"
+  },
+  {
+   "id": "e3",
+   "fromNode": "hub",
+   "toNode": "t3"
+  },
+  {
+   "id": "e4",
+   "fromNode": "hub",
+   "toNode": "t4"
+  },
+  {
+   "id": "e5",
+   "fromNode": "hub",
+   "toNode": "t5"
+  },
+  {
+   "id": "e6",
+   "fromNode": "hub",
+   "toNode": "t6"
+  },
+  {
+   "id": "e7",
+   "fromNode": "hub",
+   "toNode": "t7"
+  },
+  {
+   "id": "e8",
+   "fromNode": "hub",
+   "toNode": "t8"
+  },
+  {
+   "id": "e9",
+   "fromNode": "hub",
+   "toNode": "t9"
+  },
+  {
+   "id": "e10",
+   "fromNode": "hub",
+   "toNode": "t10"
+  },
+  {
+   "id": "e11",
+   "fromNode": "hub",
+   "toNode": "t11"
+  },
+  {
+   "id": "e12",
+   "fromNode": "hub",
+   "toNode": "t12"
+  },
+  {
+   "id": "e13",
+   "fromNode": "hub",
+   "toNode": "t13"
+  },
+  {
+   "id": "e14",
+   "fromNode": "hub",
+   "toNode": "t14"
+  },
+  {
+   "id": "e15",
+   "fromNode": "hub",
+   "toNode": "t15"
+  },
+  {
+   "id": "e16",
+   "fromNode": "hub",
+   "toNode": "t16"
+  },
+  {
+   "id": "e17",
+   "fromNode": "hub",
+   "toNode": "t17"
+  },
+  {
+   "id": "e18",
+   "fromNode": "hub",
+   "toNode": "t18"
+  },
+  {
+   "id": "e19",
+   "fromNode": "hub",
+   "toNode": "t19"
+  },
+  {
+   "id": "e20",
+   "fromNode": "hub",
+   "toNode": "t20"
+  },
+  {
+   "id": "m0-t4",
+   "fromNode": "m0",
+   "toNode": "t4"
+  },
+  {
+   "id": "m0-t0",
+   "fromNode": "m0",
+   "toNode": "t0"
+  },
+  {
+   "id": "m0-t10",
+   "fromNode": "m0",
+   "toNode": "t10"
+  },
+  {
+   "id": "m0-t16",
+   "fromNode": "m0",
+   "toNode": "t16"
+  },
+  {
+   "id": "m0-t1",
+   "fromNode": "m0",
+   "toNode": "t1"
+  },
+  {
+   "id": "m0-t14",
+   "fromNode": "m0",
+   "toNode": "t14"
+  },
+  {
+   "id": "m0-t15",
+   "fromNode": "m0",
+   "toNode": "t15"
+  },
+  {
+   "id": "m1-t18",
+   "fromNode": "m1",
+   "toNode": "t18"
+  },
+  {
+   "id": "m1-t9",
+   "fromNode": "m1",
+   "toNode": "t9"
+  },
+  {
+   "id": "m1-t11",
+   "fromNode": "m1",
+   "toNode": "t11"
+  },
+  {
+   "id": "m1-t6",
+   "fromNode": "m1",
+   "toNode": "t6"
+  },
+  {
+   "id": "m1-t3",
+   "fromNode": "m1",
+   "toNode": "t3"
+  },
+  {
+   "id": "m1-t17",
+   "fromNode": "m1",
+   "toNode": "t17"
+  },
+  {
+   "id": "m1-t13",
+   "fromNode": "m1",
+   "toNode": "t13"
+  },
+  {
+   "id": "m1-t5",
+   "fromNode": "m1",
+   "toNode": "t5"
+  },
+  {
+   "id": "m2-t18",
+   "fromNode": "m2",
+   "toNode": "t18"
+  },
+  {
+   "id": "m2-t2",
+   "fromNode": "m2",
+   "toNode": "t2"
+  },
+  {
+   "id": "m2-t14",
+   "fromNode": "m2",
+   "toNode": "t14"
+  },
+  {
+   "id": "m2-t7",
+   "fromNode": "m2",
+   "toNode": "t7"
+  },
+  {
+   "id": "m2-t5",
+   "fromNode": "m2",
+   "toNode": "t5"
+  },
+  {
+   "id": "m3-t4",
+   "fromNode": "m3",
+   "toNode": "t4"
+  },
+  {
+   "id": "m3-t0",
+   "fromNode": "m3",
+   "toNode": "t0"
+  },
+  {
+   "id": "m3-t20",
+   "fromNode": "m3",
+   "toNode": "t20"
+  },
+  {
+   "id": "m3-t15",
+   "fromNode": "m3",
+   "toNode": "t15"
+  },
+  {
+   "id": "m4-t19",
+   "fromNode": "m4",
+   "toNode": "t19"
+  },
+  {
+   "id": "m4-t1",
+   "fromNode": "m4",
+   "toNode": "t1"
+  },
+  {
+   "id": "m4-t6",
+   "fromNode": "m4",
+   "toNode": "t6"
+  },
+  {
+   "id": "m4-t17",
+   "fromNode": "m4",
+   "toNode": "t17"
+  },
+  {
+   "id": "m5-t4",
+   "fromNode": "m5",
+   "toNode": "t4"
+  },
+  {
+   "id": "m5-t3",
+   "fromNode": "m5",
+   "toNode": "t3"
+  },
+  {
+   "id": "m5-t13",
+   "fromNode": "m5",
+   "toNode": "t13"
+  },
+  {
+   "id": "m6-t19",
+   "fromNode": "m6",
+   "toNode": "t19"
+  },
+  {
+   "id": "m6-t7",
+   "fromNode": "m6",
+   "toNode": "t7"
+  },
+  {
+   "id": "m6-t15",
+   "fromNode": "m6",
+   "toNode": "t15"
+  },
+  {
+   "id": "m7-t3",
+   "fromNode": "m7",
+   "toNode": "t3"
+  },
+  {
+   "id": "m7-t11",
+   "fromNode": "m7",
+   "toNode": "t11"
+  },
+  {
+   "id": "m8-t18",
+   "fromNode": "m8",
+   "toNode": "t18"
+  },
+  {
+   "id": "m8-t12",
+   "fromNode": "m8",
+   "toNode": "t12"
+  },
+  {
+   "id": "m8-t3",
+   "fromNode": "m8",
+   "toNode": "t3"
+  },
+  {
+   "id": "m8-t15",
+   "fromNode": "m8",
+   "toNode": "t15"
+  },
+  {
+   "id": "m9-t16",
+   "fromNode": "m9",
+   "toNode": "t16"
+  },
+  {
+   "id": "m9-t15",
+   "fromNode": "m9",
+   "toNode": "t15"
+  },
+  {
+   "id": "m10-t0",
+   "fromNode": "m10",
+   "toNode": "t0"
+  },
+  {
+   "id": "m10-t5",
+   "fromNode": "m10",
+   "toNode": "t5"
+  },
+  {
+   "id": "m11-t19",
+   "fromNode": "m11",
+   "toNode": "t19"
+  },
+  {
+   "id": "m12-t3",
+   "fromNode": "m12",
+   "toNode": "t3"
+  },
+  {
+   "id": "m12-t5",
+   "fromNode": "m12",
+   "toNode": "t5"
+  },
+  {
+   "id": "m12-t14",
+   "fromNode": "m12",
+   "toNode": "t14"
+  }
+ ]
+}

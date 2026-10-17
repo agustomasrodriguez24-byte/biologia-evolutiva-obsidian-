@@ -1,0 +1,115 @@
+{
+ "nodes": [
+  {
+   "id": "n29",
+   "type": "text",
+   "text": "# El sol es el internet del cuerpo\n\nSin señal, el reloj queda con la hora vieja, como el celular que baja del avión.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n30",
+   "type": "text",
+   "text": "## Luz y sol\n*Lo que entra*\n\nLa luz le dice al cuerpo qué hora es, y con eso ordena todas las hormonas. Es el reloj de todo lo demás.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n31",
+   "type": "text",
+   "text": "### De mañana\n- Ver el amanecer, sin vidrios\n- Sol del mediodía y del atardecer\n- Despertar sin despertador, cerca del amanecer\n\n*Nutrillermo · Nieto · Bayter*",
+   "x": -170,
+   "y": -630,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n33",
+   "type": "text",
+   "text": "### De noche\n- Luz roja o velas, como el fuego\n- Lentes que bloquean el azul\n- Celular fuera del dormitorio, router apagado\n- Bajar la temperatura\n\n*Nutrillermo · Marcos · Nieto*",
+   "x": 652,
+   "y": -203,
+   "width": 340,
+   "height": 250,
+   "color": "6"
+  },
+  {
+   "id": "n35",
+   "type": "text",
+   "text": "### Por qué importa\n- La luz blanca de noche = 'es mediodía'\n- Hambre y energía a destiempo\n- Insulina y leptina desordenadas (síndrome cronometabólico)\n\n*Nutrillermo · Nieto*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n37",
+   "type": "text",
+   "text": "### El sol como alimento\n- El primer alimento del ser humano\n- Crear el 'callo solar'\n- Vitamina D, energía para las mitocondrias\n\n*Endika · Nutrillermo · Félix*",
+   "x": -678,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n39",
+   "type": "text",
+   "text": "### Herramientas\n- Lámparas de luz roja\n- Anillo para medir el sueño\n- Café solo antes de las 13 h\n\n*Nutrillermo*",
+   "x": -992,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n41",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"El ambiente de luz define tu salud.\"\n> — **Nutrillermo**\n\n> \"El sol nutre más que la comida.\"\n> — **Nutrillermo**\n\n> \"Solo cambiando horarios vemos maravillas en poco tiempo.\"\n> — **Claudio Nieto**\n\n> \"El hábito más poderoso es comer de día y respetar el ritmo circadiano.\"\n> — **Marcos**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 470,
+   "color": "3"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e32",
+   "fromNode": "n29",
+   "toNode": "n31"
+  },
+  {
+   "id": "e34",
+   "fromNode": "n29",
+   "toNode": "n33"
+  },
+  {
+   "id": "e36",
+   "fromNode": "n29",
+   "toNode": "n35"
+  },
+  {
+   "id": "e38",
+   "fromNode": "n29",
+   "toNode": "n37"
+  },
+  {
+   "id": "e40",
+   "fromNode": "n29",
+   "toNode": "n39"
+  },
+  {
+   "id": "e42",
+   "fromNode": "n29",
+   "toNode": "n41"
+  }
+ ]
+}

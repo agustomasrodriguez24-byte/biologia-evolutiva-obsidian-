@@ -1,0 +1,129 @@
+{
+ "nodes": [
+  {
+   "id": "n57",
+   "type": "text",
+   "text": "# Comida densa\n\nTres preguntas: ¿qué nutrientes tiene y cuánto? ¿Qué necesito yo, cuánto y cada cuánto?",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n58",
+   "type": "text",
+   "text": "## Qué comer\n*Lo que entra*\n\nLa comida que nutre de verdad es la animal. Lo demás acompaña. Si comés poco, tiene que ser denso.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n59",
+   "type": "text",
+   "text": "### La base\n- Carne, huevo (con yema), pescado\n- Hígado y vísceras\n- Animales de pastura, al sol\n- Empezar el plato por la proteína\n\n*Nutrillermo · Juan Bola · Duarte · Bayter*",
+   "x": 262,
+   "y": -559,
+   "width": 340,
+   "height": 250,
+   "color": "4"
+  },
+  {
+   "id": "n61",
+   "type": "text",
+   "text": "### La grasa buena\n- Grasa de la carne, manteca de pastura\n- Oliva, aceitunas, palta\n- Fuera: aceites de semillas ('de coche')\n\n*Nutrillermo · Juan Bola*",
+   "x": 694,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n63",
+   "type": "text",
+   "text": "### Los adornos\n- Verduras de estación como compañía\n- Fruta entera, de estación, nunca jugo\n- Tubérculos más en invierno\n\n*Nutrillermo · Juan Bola*",
+   "x": 262,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n65",
+   "type": "text",
+   "text": "### Lo vivo\n- Vinagre de manzana con madre\n- Queso azul y quesos viejos\n- Fermentos locales, caldo de huesos\n\n*Duarte · Nutrillermo*",
+   "x": -602,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n67",
+   "type": "text",
+   "text": "### El plato de Juan Bola\n- Más de la mitad: proteína animal\n- ¼ verduras\n- ⅛ grasa extra · ⅛ papa o boniato\n\n*Juan Bola*",
+   "x": -1034,
+   "y": 10,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n69",
+   "type": "text",
+   "text": "### El semáforo\n- Verde: carne, pollo, pescado, huevo, palta, brócoli\n- Amarillo: café, pan, queso, arroz, pasta, vino\n- Rojo: gaseosas, papas fritas, fiambres, ultraprocesados\n\n*Nutrillermo*",
+   "x": -602,
+   "y": -544,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n71",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Para nutrirte de manzana necesitarías 35 kg por día.\"\n> — **David Duarte**\n\n> \"La yema tiene el secreto de la vida.\"\n> — **Nutrillermo**\n\n> \"Le tenemos más miedo al huevo de gallina que al huevo Kinder.\"\n> — **Endika Montiel**\n\n> \"No como los alimentos que me gustan: como los alimentos a los que les gusto.\"\n> — **Tribaluri**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 470,
+   "color": "4"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e60",
+   "fromNode": "n57",
+   "toNode": "n59"
+  },
+  {
+   "id": "e62",
+   "fromNode": "n57",
+   "toNode": "n61"
+  },
+  {
+   "id": "e64",
+   "fromNode": "n57",
+   "toNode": "n63"
+  },
+  {
+   "id": "e66",
+   "fromNode": "n57",
+   "toNode": "n65"
+  },
+  {
+   "id": "e68",
+   "fromNode": "n57",
+   "toNode": "n67"
+  },
+  {
+   "id": "e70",
+   "fromNode": "n57",
+   "toNode": "n69"
+  },
+  {
+   "id": "e72",
+   "fromNode": "n57",
+   "toNode": "n71"
+  }
+ ]
+}

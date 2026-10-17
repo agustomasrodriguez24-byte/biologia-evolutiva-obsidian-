@@ -1,0 +1,94 @@
+filters:
+  and:
+    - file.hasProperty("tipo")
+    - not:
+        - file.inFolder("90 Plantillas")
+formulas:
+  orden_prioridad: if(prioridad == "alta", 1, if(prioridad == "media", 2, 3))
+views:
+  - type: table
+    name: Sin fuente
+    filters:
+      and:
+        - tipo == "concepto" || tipo == "mecanismo" || tipo == "intervencion" || tipo == "protocolo" || tipo == "metrica"
+        - fuentes.isEmpty()
+    groupBy:
+      property: tipo
+      direction: ASC
+    order:
+      - file.name
+      - pilar
+      - nivel_evidencia
+      - estado
+  - type: table
+    name: Fuentes sin uso
+    filters:
+      and:
+        - tipo == "fuente"
+        - file.backlinks.isEmpty()
+    order:
+      - file.name
+      - tipo_fuente
+      - nivel_evidencia
+  - type: table
+    name: Protocolos con evidencia débil
+    filters:
+      and:
+        - tipo == "protocolo"
+        - nivel_evidencia == "C" || nivel_evidencia == "D" || nivel_evidencia == "E" || nivel_evidencia == "F" || nivel_evidencia.isEmpty()
+    order:
+      - file.name
+      - nivel_evidencia
+      - riesgo
+      - estado
+  - type: table
+    name: Productos sin justificación
+    filters:
+      and:
+        - tipo == "producto"
+        - necesidad.isEmpty() || evidencia_ingrediente.isEmpty()
+    order:
+      - file.name
+      - necesidad
+      - evidencia_ingrediente
+      - evidencia_producto
+  - type: table
+    name: Para revisar
+    filters:
+      or:
+        - estado == "revisar"
+        - fecha_revision < today() - "180d"
+    order:
+      - file.name
+      - tipo
+      - estado
+      - fecha_revision
+    sort:
+      - property: fecha_revision
+        direction: ASC
+  - type: table
+    name: Preguntas abiertas
+    filters:
+      and:
+        - tipo == "pregunta"
+        - estado != "resuelta"
+    order:
+      - file.name
+      - prioridad
+      - pilar
+      - estado
+    sort:
+      - property: formula.orden_prioridad
+        direction: ASC
+  - type: table
+    name: Evidencia por pilar
+    filters:
+      and:
+        - tipo != "sistema" && tipo != "pilar" && tipo != "entrada"
+    groupBy:
+      property: nivel_evidencia
+      direction: ASC
+    order:
+      - file.name
+      - tipo
+      - pilar

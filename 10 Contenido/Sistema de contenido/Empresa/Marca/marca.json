@@ -1,0 +1,126 @@
+{
+  "_leeme": "La ficha de la marca que leen los scripts. Se completa con /configurar-marca (o a mano) y después se corre: python Áreas/Contenido/herramientas/aplicar-marca.py. Los textos van sin comillas raras ni guion largo. Lo que no se sabe todavía queda como está: los scripts avisan.",
+  "nombre": "Biología Evolutiva",
+  "cuenta": "@agustin.nutricion.evolutiva",
+  "descriptor": "Conocimiento de años, bajado a tu día",
+  "rubro": "sistema de salud y nutrición ancestral",
+  "ciudad": "Maldonado y Punta del Este",
+  "idioma": "es-rioplatense",
+  "trato": "vos",
+  "cta": {
+    "texto": "Escribime TEST por mensaje",
+    "boton": "DM @agustin.nutricion.evolutiva",
+    "canal": "Instagram DM"
+  },
+  "hashtags_marca": [
+    "#BiologiaEvolutiva",
+    "#Uruguay",
+    "#SaludAncestral"
+  ],
+  "prohibido": [
+    {
+      "patron": "\\bcura(r|n|rte|rse)?\\b",
+      "motivo": "Claim medicinal: no se dice que algo cura (Brief, Claims permitidos)"
+    },
+    {
+      "patron": "\\b(trata|tratamiento|previene|prevenir|sana|sanar|elimina la enfermedad)\\b",
+      "motivo": "Claim medicinal"
+    },
+    {
+      "patron": "\\bdetox\\b|\\bdesintoxic",
+      "motivo": "Sin respaldo regulatorio"
+    },
+    {
+      "patron": "comprobado cient[ií]ficamente|100 ?% comprobado",
+      "motivo": "Casi nunca es exacto: citar quién lo enseña"
+    },
+    {
+      "patron": "\\b(dej[aá]|dejar|suspend[eé]|cambi[aá]) (la |tu |de tomar )?(medicaci[oó]n|pastillas|remedios)\\b",
+      "motivo": "No se indica cambiar medicación por cuenta propia"
+    },
+    {
+      "patron": "garantizad[oa]|resultado asegurado|en \\d+ d[ií]as (baj[aá]s|cur[aá]s|te sac[aá]s)",
+      "motivo": "No se garantiza resultado ni plazo"
+    },
+    {
+      "patron": "\\b(el|la) mejor\\b|\\bl[ií]der(es)?\\b|\\bn[uú]mero 1\\b",
+      "motivo": "Superlativo sin fuente"
+    },
+    {
+      "patron": "milagro|milagros[oa]",
+      "motivo": "Claim exagerado"
+    }
+  ],
+  "frases_ia_extra": [],
+  "vocabulario_transcripcion": "Biología Evolutiva, Nutrición Evolutiva, Tabiat, Unani, Duarte, Nutrillermo, Sanagustín, Bayter, Endika, Claudio Nieto, flora, densidad, sal marina",
+  "correcciones_transcripcion": {
+    "\\bbiologia evolutiva\\b": "Biología Evolutiva",
+    "\\bnutricion evolutiva\\b": "Nutrición Evolutiva",
+    "\\btabiat\\b": "Tabiat"
+  },
+  "modulos": {
+    "historias": true,
+    "video": true,
+    "linkedin": false,
+    "tiktok": true,
+    "facebook": false
+  },
+  "fuentes": {
+    "titulo": "Instrument Serif",
+    "texto": "Switzer",
+    "marca": "Poppins",
+    "mano": "Caveat",
+    "frase": "Bricolage Grotesque",
+    "serif": "Instrument Serif"
+  },
+  "radio": "22px",
+  "color_tinta_oscura": "#14110c",
+  "color_whatsapp": "#25d366",
+  "paleta_por_defecto": "principal",
+  "paletas": {
+    "principal": {
+      "_nota": "Negro y dorado del logo. La de todos los días: profunda, ordenada, sin estridencias",
+      "base": "#0f0e0c",
+      "tinta_base": "#efe6d2",
+      "acento": "#c9a24a",
+      "clara": "#f3ede1",
+      "tinta_clara": "#1a1712",
+      "acento_clara": "#7d5f22",
+      "golpe": "#c9a24a",
+      "tinta_golpe": "#0f0e0c"
+    },
+    "alterna": {
+      "_nota": "Verde hoja profundo del logo, con dorado. Para alternar entre piezas seguidas y para lo vegetal, la tierra, la flora",
+      "base": "#14271b",
+      "tinta_base": "#efe6d2",
+      "acento": "#c9a24a",
+      "clara": "#ece5d5",
+      "tinta_clara": "#14271b",
+      "acento_clara": "#3d6630",
+      "golpe": "#c9a24a",
+      "tinta_golpe": "#14271b"
+    },
+    "clara": {
+      "_nota": "Papel crema con tinta negra y bronce. Para lo liviano y los hábitos simples, sin perder el tono",
+      "base": "#f3ede1",
+      "tinta_base": "#1a1712",
+      "acento": "#7d5f22",
+      "clara": "#fbf8f1",
+      "tinta_clara": "#1a1712",
+      "acento_clara": "#7d5f22",
+      "golpe": "#0f0e0c",
+      "tinta_golpe": "#e2c886"
+    },
+    "noche": {
+      "_nota": "Negro casi puro: lo íntimo, noche oscura, sueño, mente",
+      "base": "#070706",
+      "tinta_base": "#e9e1cf",
+      "acento": "#b8923f",
+      "clara": "#ece5d5",
+      "tinta_clara": "#1a1712",
+      "acento_clara": "#7d5f22",
+      "golpe": "#b8923f",
+      "tinta_golpe": "#070706"
+    }
+  }
+}

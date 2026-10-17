@@ -1,0 +1,53 @@
+filters:
+  and:
+    - file.hasProperty("tipo")
+    - tipo != "sistema" && tipo != "pilar" && tipo != "entrada"
+    - not:
+        - file.inFolder("90 Plantillas")
+views:
+  - type: table
+    name: Por tipo
+    groupBy:
+      property: tipo
+      direction: ASC
+    order:
+      - file.name
+      - pilar
+      - subpilar
+      - nivel_evidencia
+      - estado
+      - fecha_revision
+  - type: table
+    name: Por estado
+    groupBy:
+      property: estado
+      direction: ASC
+    order:
+      - file.name
+      - tipo
+      - pilar
+      - fecha_revision
+  - type: table
+    name: Contenido
+    filters:
+      and:
+        - tipo == "contenido"
+    groupBy:
+      property: estado
+      direction: ASC
+    order:
+      - file.name
+      - formato
+      - conceptos
+      - nivel_evidencia
+  - type: table
+    name: Experimentos
+    filters:
+      and:
+        - tipo == "experimento"
+    order:
+      - file.name
+      - estado
+      - fecha_inicio
+      - fecha_fin
+      - metricas

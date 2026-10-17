@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"n15","type":"text","text":"# Tres cuerpos, un orden\n\nSi el motor anda al 20 %, por más mentalidad que trabajes, no llega la electricidad.","x":-260,"y":-110,"width":520,"height":220,"color":"6"},
+		{"id":"n16","type":"text","text":"## Los tres cuerpos\n*La raíz*\n\nLa estructura de Academia Unani. Se trabaja de adentro hacia afuera: primero el vegetal, después el animal, después el yo.","x":-260,"y":-420,"width":520,"height":220},
+		{"id":"n17","type":"text","text":"### 1 · Cuerpo vegetal\n- Jefe: el hígado · elementos: tierra y agua\n- Digestión, respiración, líquidos, electrolitos\n- Se trabaja con: sal y agua, pH, flora, horarios, ayuno\n- Es el 80 % del trabajo al principio\n\n*Duarte*","x":-170,"y":-645,"width":340,"height":250,"color":"4"},
+		{"id":"n19","type":"text","text":"### 2 · Cuerpo animal\n- Jefe: el corazón · elemento: aire\n- Músculos, huesos, circulación, postura\n- 4 pilares: respiración, elasticidad, fuerza, cardio\n- Pilates, taichí, calistenia, natación\n\n*Duarte*","x":652,"y":-203,"width":340,"height":250,"color":"1"},
+		{"id":"n21","type":"text","text":"### 3 · Cuerpo del yo\n- Jefe: el cerebro · elemento: fuego\n- Identidad, emociones, sistema familiar\n- Lo que cura: darse cuenta (90 %)\n- Ocupar tu lugar en la familia\n\n*Duarte*","x":338,"y":513,"width":340,"height":250,"color":"6"},
+		{"id":"n23","type":"text","text":"### Los puentes\n- Respiración: entre vegetal y animal\n- Riñones: entre vegetal y animal\n- Sexualidad: entre animal y yo\n\n*Duarte*","x":-678,"y":528,"width":340,"height":220,"color":"5"},
+		{"id":"n25","type":"text","text":"### Después de la salud\n- La salud es el primer paso, no la meta\n- El excedente de energía va a crecer como persona\n- Familia, sociedad, planeta\n\n*Duarte*","x":-992,"y":-188,"width":340,"height":220},
+		{"id":"n27","type":"text","text":"## Cómo lo dicen\n\n> \"Lo que se da cuenta se cura.\"\n> — **David Duarte**\n\n> \"Primero curo el estrés biológico, después el emocional.\"\n> — **David Duarte**","x":-450,"y":1000,"width":900,"height":280,"color":"6"}
+	],
+	"edges":[
+		{"id":"e18","fromNode":"n15","toNode":"n17","fromSide":"top","toSide":"bottom"},
+		{"id":"e20","fromNode":"n15","toNode":"n19","fromSide":"right","toSide":"left"},
+		{"id":"e22","fromNode":"n15","toNode":"n21","fromSide":"bottom","toSide":"top"},
+		{"id":"e24","fromNode":"n15","toNode":"n23","fromSide":"bottom","toSide":"top"},
+		{"id":"e26","fromNode":"n15","toNode":"n25","fromSide":"left","toSide":"right"},
+		{"id":"e28","fromNode":"n15","toNode":"n27","fromSide":"bottom","toSide":"top"}
+	]
+}

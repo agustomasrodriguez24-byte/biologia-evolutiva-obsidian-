@@ -1,0 +1,129 @@
+{
+ "nodes": [
+  {
+   "id": "n115",
+   "type": "text",
+   "text": "# Primero el cuerpo, después la mente\n\nCon el cuerpo en crisis, el cerebro apaga la parte que hace terapia.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n116",
+   "type": "text",
+   "text": "## Mente y emociones\n*El yo*\n\nMente y cuerpo son uno, pero primero se fortalece el cuerpo. Después lo que cura es darse cuenta.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n117",
+   "type": "text",
+   "text": "### Dos estreses\n- Biológico: el cuerpo desequilibrado\n- Psicológico: 'de presa' (ataque, huida)\n- El sano: 'de cazador', el hambre que da foco\n\n*Duarte*",
+   "x": 262,
+   "y": -544,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n119",
+   "type": "text",
+   "text": "### Emociones y sentimientos\n- Emociones: alarmas cortas que no enferman\n- Sentimientos: rumiados años, sí enferman\n- Darse cuenta: 90 % del trabajo\n\n*Duarte*",
+   "x": 694,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n121",
+   "type": "text",
+   "text": "### Conflictos biológicos\n- Estómago: no poder digerir algo\n- Huesos: desvalorización\n- Lumbares: falta de apoyo · riñón: abandono\n\n*Sanagustín*",
+   "x": 262,
+   "y": 564,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n123",
+   "type": "text",
+   "text": "### El sistema familiar\n- Cargamos dolores de los ancestros\n- Ocupar tu lugar: ser hijo, no pareja de tus padres\n- Lo que era karma se vuelve fuerza\n\n*Duarte*",
+   "x": -602,
+   "y": 564,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n125",
+   "type": "text",
+   "text": "### Rituales\n- Priming: 30 respiraciones, gratitud, 3 logros\n- Meditación como lupa\n- Comer agradeciendo\n\n*Nutrillermo · Félix*",
+   "x": -1034,
+   "y": 10,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n127",
+   "type": "text",
+   "text": "### Arriba y abajo\n- De arriba hacia abajo: terapia\n- De abajo hacia arriba: sueño, comida, sol, movimiento\n- Los vínculos como ancla\n\n*Marcos*",
+   "x": -602,
+   "y": -544,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n129",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Las enfermedades emocionales no existen: enferman los conflictos biológicos.\"\n> — **Gonzalo Sanagustín**\n\n> \"Cuando el agua está cristalina, se nota la gota de tierra.\"\n> — **Félix da Charry**\n\n> \"La actividad física es el antidepresivo más poderoso.\"\n> — **Marcos**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 375,
+   "color": "6"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e118",
+   "fromNode": "n115",
+   "toNode": "n117"
+  },
+  {
+   "id": "e120",
+   "fromNode": "n115",
+   "toNode": "n119"
+  },
+  {
+   "id": "e122",
+   "fromNode": "n115",
+   "toNode": "n121"
+  },
+  {
+   "id": "e124",
+   "fromNode": "n115",
+   "toNode": "n123"
+  },
+  {
+   "id": "e126",
+   "fromNode": "n115",
+   "toNode": "n125"
+  },
+  {
+   "id": "e128",
+   "fromNode": "n115",
+   "toNode": "n127"
+  },
+  {
+   "id": "e130",
+   "fromNode": "n115",
+   "toNode": "n129"
+  }
+ ]
+}

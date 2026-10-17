@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"n239","type":"text","text":"# Nutrición Evolutiva\n\nMi proyecto de vida.\n\n**Un sistema de salud para volver a funcionar como un humano: comida real, luz, movimiento, mente.**","x":-320,"y":-130,"width":640,"height":260,"color":"4"},
+		{"id":"n240","type":"text","text":"## El sistema de salud\n- [[El hilo de la vida.canvas|El hilo de la vida]] (el fundamento)\n- [[Sistema de salud Nutrición Evolutiva]]\n- [[Las 18 semanas.canvas|Mapa de las 18 semanas]]\n- [[Cómo alimenta todo.canvas|Mapa: cómo alimenta todo]]\n- Carpeta `18 Sistema de salud` (las 18 semanas)\n- [[Modelo Nutrición Evolutiva]]\n- [[Método de trabajo]]","x":-190,"y":-820,"width":380,"height":310,"color":"4"},
+		{"id":"n242","type":"text","text":"## El conocimiento\n- [[Información madre]] (12 tesis)\n- Carpeta `16 Órganos`\n- Alimentos y nutrientes (`14`, `15`)\n- [[Niveles de evidencia]]","x":542,"y":-549,"width":380,"height":220,"color":"5"},
+		{"id":"n244","type":"text","text":"## El negocio\n- [[Visión y objetivos]]\n- [[Modelo de negocio]]\n- [[Dirección creativa]]\n- [[Decisiones]]\n- [[Claims permitidos]]","x":723,"y":60,"width":380,"height":250,"color":"3"},
+		{"id":"n246","type":"text","text":"## La operación\n- [[Ventas y clientes]]\n- [[Logística]]\n- Etapa 1: Maldonado y Punta del Este, venta por WhatsApp","x":216,"y":549,"width":380,"height":190,"color":"1"},
+		{"id":"n248","type":"text","text":"## La web\n- [[Mapa de la web.canvas|Mapa de la web]]\n- [[Estado - Web]]","x":-596,"y":549,"width":380,"height":160,"color":"6"},
+		{"id":"n250","type":"text","text":"## Lo que aprendí\n- [[00 Mapa de los videos.canvas|Mapa de los videos]]\n- [[La mente de los maestros]]","x":-1103,"y":60,"width":380,"height":160,"color":"4"},
+		{"id":"n252","type":"text","text":"## Cómo trabajamos\n- [[Inicio]]\n- [[Registro de cambios]]\n- Estados de cada área\n- Avril programa · Agus decide · Claude ordena","x":-922,"y":-549,"width":380,"height":220}
+	],
+	"edges":[
+		{"id":"e241","fromNode":"n239","toNode":"n240","fromSide":"top","toSide":"bottom"},
+		{"id":"e243","fromNode":"n239","toNode":"n242","fromSide":"top","toSide":"bottom"},
+		{"id":"e245","fromNode":"n239","toNode":"n244","fromSide":"right","toSide":"left"},
+		{"id":"e247","fromNode":"n239","toNode":"n246","fromSide":"bottom","toSide":"top"},
+		{"id":"e249","fromNode":"n239","toNode":"n248","fromSide":"bottom","toSide":"top"},
+		{"id":"e251","fromNode":"n239","toNode":"n250","fromSide":"left","toSide":"right"},
+		{"id":"e253","fromNode":"n239","toNode":"n252","fromSide":"top","toSide":"bottom"}
+	]
+}

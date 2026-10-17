@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Carrusel del sistema de contenido. Copiar a Áreas/Contenido/outputs/aaaa-mm/carruseles/NN-tema/index.html
+     Tipo: ___ (Áreas/Contenido/Templates/Tipos de carrusel.md)
+     Paleta: ___ (una de las de Empresa/Marca/marca.json; distinta a la de la publicación anterior) → Áreas/Contenido/Templates/Estilo de carrusel.md
+     Pieza: Plan mensual/aaaa-mm.md, Pieza N
+     Exportar: python .claude/skills/carrusel/render.py Áreas/Contenido/outputs/aaaa-mm/carruseles/NN-tema
+     Muestras de cada paleta y pieza: Áreas/Contenido/Templates/Muestrario carrusel/ -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Carrusel · tema</title>
+<!-- 6 niveles arriba (tema/carruseles/aaaa-mm/outputs/Contenido/Áreas) está la raíz del repo -->
+<link rel="stylesheet" href="../../../../../../.claude/skills/carrusel/base.css">
+</head>
+<!-- La firma: cambiar @tucuenta y "Lo que hacés" por cuenta y descriptor de marca.json.
+     La paleta va acá. Por lámina: class="slide clara" (1-2) y class="slide golpe" (una, la que más importa) -->
+<body class="paleta-principal">
+
+<!-- 1 · Portada: kicker + título enorme (6 palabras o menos) + un sticker. "deslizá" en la firma -->
+<section class="slide">
+  <div class="luz"></div>
+  <div class="cuerpo">
+    <span class="kicker">Tema</span>
+    <span class="sticker encima">el remate</span>
+    <h1 class="xl">La promesa, <span class="resalta">concreta.</span></h1>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div><div class="deslizar">deslizá</div></div>
+</section>
+
+<!-- 2..N-1 · Desarrollo: una idea por lámina, letra grande. La 2 es un segundo gancho -->
+<section class="slide">
+  <div class="cuerpo">
+    <h2>Una idea, con <span class="resalta">la palabra que importa</span> en color.</h2>
+    <p class="suave">Texto corto de apoyo.</p>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- N · Cierre de golpe: UN solo CTA -->
+<section class="slide golpe">
+  <div class="cuerpo">
+    <h2>El cierre que recapitula</h2>
+    <span class="boton wa">El CTA de marca.json (cta.boton)</span>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<script>
+  // render.py pide ?s=N: queda una sola lámina, sin márgenes
+  const laminas = [...document.querySelectorAll('.slide')];
+  laminas.forEach((l, i) => l.dataset.n = (i + 1) + ' / ' + laminas.length);  // solo se ve con body.linkedin
+  const s = Number(new URLSearchParams(location.search).get('s'));
+  if (s) { document.body.classList.add('solo'); laminas[s - 1]?.classList.add('activa'); }
+</script>
+</body>
+</html>

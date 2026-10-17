@@ -1,0 +1,114 @@
+{
+ "nodes": [
+  {
+   "id": "n73",
+   "type": "text",
+   "text": "# Fuera los venenos modernos\n\nNo importa la comida que quitás si no quitás la comida que importa.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n74",
+   "type": "text",
+   "text": "## Lo que se saca\n*Lo que entra*\n\nAzúcar, harinas, lácteos jóvenes y ultraprocesados. Para todos es lo primero que hay que dejar.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n75",
+   "type": "text",
+   "text": "### Azúcar\n- El enemigo n.º 1, y es adictivo\n- Pico → insulina → bajón = 'ansiedad' de las 4\n- No hay carbohidrato esencial\n- Atracones: siempre de lo dulce\n\n*Nutrillermo · Duarte · Bayter · Sanagustín*",
+   "x": -170,
+   "y": -645,
+   "width": 340,
+   "height": 250,
+   "color": "1"
+  },
+  {
+   "id": "n77",
+   "type": "text",
+   "text": "### Pan, pasta y harinas\n- El pan de hoy no es pan\n- Si hay, masa madre y nunca primero\n- Avena: 'comida para engordar cerdos'\n- No es solo el gluten\n\n*Nutrillermo · Duarte · Félix*",
+   "x": 652,
+   "y": -203,
+   "width": 340,
+   "height": 250,
+   "color": "3"
+  },
+  {
+   "id": "n79",
+   "type": "text",
+   "text": "### Lácteos jóvenes\n- Leche, yogur, kéfir, quesos frescos\n- Antígenos que caen en tiroides, piel, articulaciones\n- Sí: quesos azules y viejos\n\n*Duarte · Félix · Sanagustín · Juan Bola*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n81",
+   "type": "text",
+   "text": "### Ultraprocesados\n- Azúcar + harina + aceite = diseñado para que comas más\n- Leer etiquetas\n- Bebidas dulces, jugos, cafés de máquina\n\n*Nutrillermo · Bayter*",
+   "x": -678,
+   "y": 528,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n83",
+   "type": "text",
+   "text": "### Trucos para dejarlos\n- Regla de los 5 segundos de placer\n- La segunda cucharada sabe igual\n- El dedo: 'No, acá mando yo'\n- Sin cheat day: no se modera lo adictivo\n\n*Nutrillermo*",
+   "x": -992,
+   "y": -203,
+   "width": 340,
+   "height": 250,
+   "color": "4"
+  },
+  {
+   "id": "n85",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"El azúcar es el enemigo, no la grasa.\"\n> — **Nutrillermo**\n\n> \"El carbohidrato es más adictivo que la heroína.\"\n> — **David Duarte**\n\n> \"Los cereales, los lácteos y las harinas te están enfermando.\"\n> — **Félix da Charry**\n\n> \"No importa la comida que quitás si no quitás la comida que importa.\"\n> — **Jorge Bayter**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 470,
+   "color": "1"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e76",
+   "fromNode": "n73",
+   "toNode": "n75"
+  },
+  {
+   "id": "e78",
+   "fromNode": "n73",
+   "toNode": "n77"
+  },
+  {
+   "id": "e80",
+   "fromNode": "n73",
+   "toNode": "n79"
+  },
+  {
+   "id": "e82",
+   "fromNode": "n73",
+   "toNode": "n81"
+  },
+  {
+   "id": "e84",
+   "fromNode": "n73",
+   "toNode": "n83"
+  },
+  {
+   "id": "e86",
+   "fromNode": "n73",
+   "toNode": "n85"
+  }
+ ]
+}

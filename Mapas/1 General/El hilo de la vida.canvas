@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"n1","type":"text","text":"# El hilo de la vida\n\nDel origen de la vida a lo que hacés mañana.\n\n[[El hilo de la vida|Abrir el índice]]","x":-300,"y":-420,"width":600,"height":220,"color":"4"},
+		{"id":"n6","type":"text","text":"## 3. La sangre\n- Plasma: oxígeno, sal, bicarbonato, proteína\n- Dos vías de enfermar: lo que comés y lo que pensás\n- El mar interior: ~9 g de sal por litro\n- La vida es eléctrica\n\n[[Capítulo 3 - La sangre|Leer el capítulo →]]","x":-640,"y":320,"width":600,"height":330,"color":"1"},
+		{"id":"n8","type":"text","text":"## 4. Lo que la vida pide\n- 1 · Oxígeno\n- 2 · Agua + sal juntas\n- 3 · Proteína, grasa y B12\n- El carbohidrato no es esencial\n\n[[Capítulo 4 - Lo que la vida pide|Leer el capítulo →]]","x":40,"y":320,"width":600,"height":330,"color":"3"},
+		{"id":"n10","type":"text","text":"## 5. Los órganos y la densidad\n- Estómago de puño, vesícula grande, bilis\n- No digerimos celulosa ni fabricamos B12\n- Vaca: 4 estómagos, come todo el día · Oso y humano: poco y denso\n- Somos osos, no vacas\n\n[[Capítulo 5 - Los órganos y la densidad|Leer el capítulo →]]","x":-640,"y":740,"width":600,"height":330,"color":"4"},
+		{"id":"n12","type":"text","text":"## 6. Cómo comer\n- Base: carne, huevo, pescado, vísceras, grasa, sal, lo vivo\n- Sacar: azúcar, harinas, lácteos jóvenes, aceites, ultraprocesados\n- Ventanas: de día, sin cena tardía, sin picar\n- El ayuno se gana: nutrir → limpiar → ayunar\n\n[[Capítulo 6 - Cómo comer|Leer el capítulo →]]","x":40,"y":740,"width":600,"height":330,"color":"4"},
+		{"id":"n14","type":"text","text":"## 7. El día a día\n- Luz, respirar, agradecer\n- 1–2 comidas densas de día\n- Moverse, sol, noche oscura\n- Las 18 semanas lo bajan a tierra\n\n[[Capítulo 7 - El día a día|Leer el capítulo →]]","x":-640,"y":1160,"width":600,"height":330,"color":"5"},
+		{"id":"n16","type":"text","text":"## → Las 18 semanas\n[[Sistema de salud Nutrición Evolutiva]]\n\nReloj → cuerpo vegetal → cuerpo animal → cuerpo del yo","x":-300,"y":1600,"width":600,"height":200,"color":"4"},
+		{"id":"n2","type":"text","text":"## 1. El origen\n- El cuerpo tiene 4.200 millones de años: el Tabiat\n- El embrión repite la historia de la vida\n- 3 capas: endodermo (vegetal), mesodermo (animal), ectodermo (yo)\n- Crecemos en un mar salado\n\n[[Capítulo 1 - El origen|Leer el capítulo →]]","x":-900,"y":-100,"width":600,"height":330,"color":"5"},
+		{"id":"n4","type":"text","text":"## 2. Formar al hijo\n- Antes de concebir: sin exceso de carbohidratos\n- Embarazo: comer para dos, no por dos; pescado azul, huevo, grasa, sal\n- La leche arma la flora alcalina\n- Las primeras comidas: como el clan; nunca azúcar\n- Respetar el instinto\n\n[[Capítulo 2 - Formar al hijo|Leer el capítulo →]]","x":200,"y":-100,"width":600,"height":330,"color":"6"}
+	],
+	"edges":[
+		{"id":"e3","fromNode":"n1","fromSide":"bottom","toNode":"n2","toSide":"top"},
+		{"id":"e5","fromNode":"n2","fromSide":"right","toNode":"n4","toSide":"left","label":"por eso"},
+		{"id":"e7","fromNode":"n4","fromSide":"bottom","toNode":"n6","toSide":"top","label":"por eso"},
+		{"id":"e9","fromNode":"n6","fromSide":"right","toNode":"n8","toSide":"left","label":"por eso"},
+		{"id":"e11","fromNode":"n8","fromSide":"bottom","toNode":"n10","toSide":"top","label":"por eso"},
+		{"id":"e13","fromNode":"n10","fromSide":"right","toNode":"n12","toSide":"left","label":"por eso"},
+		{"id":"e15","fromNode":"n12","fromSide":"bottom","toNode":"n14","toSide":"top","label":"por eso"},
+		{"id":"e17","fromNode":"n14","fromSide":"bottom","toNode":"n16","toSide":"top","label":"se aplica en"}
+	]
+}

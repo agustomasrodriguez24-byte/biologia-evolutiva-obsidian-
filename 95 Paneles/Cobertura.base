@@ -1,0 +1,50 @@
+filters:
+  and:
+    - tipo == "alimento" || tipo == "nutriente"
+    - not:
+        - file.inFolder("90 Plantillas")
+formulas:
+  puntaje: if(tipo == "alimento", ((densidad + digestibilidad + biodisponibilidad + utilizacion) / 4).toFixed(1), "")
+views:
+  - type: table
+    name: Núcleo
+    filters:
+      and:
+        - tipo == "alimento"
+        - en_nucleo == true
+    order:
+      - file.name
+      - grupo
+      - densidad
+      - digestibilidad
+      - biodisponibilidad
+      - utilizacion
+      - formula.puntaje
+      - nutrientes_clave
+  - type: table
+    name: Todos los alimentos
+    filters:
+      and:
+        - tipo == "alimento"
+    groupBy:
+      property: grupo
+      direction: ASC
+    order:
+      - file.name
+      - en_nucleo
+      - formula.puntaje
+      - nutrientes_clave
+      - estado
+  - type: table
+    name: Cobertura por nutriente
+    filters:
+      and:
+        - tipo == "nutriente"
+    groupBy:
+      property: estado_cobertura
+      direction: ASC
+    order:
+      - file.name
+      - clase
+      - ingesta_referencia
+      - unidad

@@ -1,0 +1,225 @@
+{
+  "name": "Comentario huevos a WhatsApp (Biologia Evolutiva)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "ig-comentarios",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "n1",
+      "name": "Verificacion de Meta (GET)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "ig-comentarios-get"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{$json.query['hub.verify_token']}}",
+              "rightValue": "REEMPLAZAR_TOKEN_DE_VERIFICACION",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "n2",
+      "name": "Token correcto?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{$json.query['hub.challenge']}}",
+        "options": {}
+      },
+      "id": "n3",
+      "name": "Devolver challenge",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "token invalido",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "n4",
+      "name": "Rechazar",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ig-comentarios",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "n5",
+      "name": "Comentario nuevo (POST)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "ig-comentarios-post"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrae los comentarios nuevos que contienen la palabra clave.\nconst IG_ID_PROPIO = 'REEMPLAZAR_ID_DE_INSTAGRAM'; // para no responderse a si mismo\nconst salida = [];\nconst cuerpo = $input.first().json.body || {};\nfor (const entrada of (cuerpo.entry || [])) {\n  for (const cambio of (entrada.changes || [])) {\n    if (cambio.field !== 'comments') continue;\n    const v = cambio.value || {};\n    const texto = String(v.text || '').toLowerCase();\n    const propio = v.from && String(v.from.id) === IG_ID_PROPIO;\n    if (!propio && /huevo/.test(texto)) {\n      salida.push({ json: { comment_id: v.id, texto: v.text, usuario: v.from ? v.from.username : '' } });\n    }\n  }\n}\nreturn salida;"
+      },
+      "id": "n6",
+      "name": "Filtrar palabra huevos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.instagram.com/v21.0/me/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({\"recipient\":{\"comment_id\":\"={{$json.comment_id}}\"},\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"button\",\"text\":\"Hola! Gracias por escribir. Tocá el botón y se te abre WhatsApp con tu pedido ya escrito. Entregamos en Maldonado y Punta del Este.\",\"buttons\":[{\"type\":\"web_url\",\"url\":\"https://wa.me/59893897963?text=Hola!%20Vi%20tu%20reel%20y%20quiero%20un%20maple%20de%20huevos%20de%20gallina%20libre.%20%C2%BFC%C3%B3mo%20hago%20el%20pedido%3F\",\"title\":\"Pedir mi maple\"}]}}}}) }}",
+        "options": {}
+      },
+      "id": "n7",
+      "name": "Mandar DM con boton a WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        300
+      ],
+      "notes": "Credencial 'Header Auth' con Authorization: Bearer <token de Instagram>. NO pegar el token en el flujo."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{$('Filtrar palabra huevos').item.json.comment_id}}/replies",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ message: 'Te lo mandé por mensaje' }) }}",
+        "options": {}
+      },
+      "id": "n8",
+      "name": "Responder el comentario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Verificacion de Meta (GET)": {
+      "main": [
+        [
+          {
+            "node": "Token correcto?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Token correcto?": {
+      "main": [
+        [
+          {
+            "node": "Devolver challenge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Rechazar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Comentario nuevo (POST)": {
+      "main": [
+        [
+          {
+            "node": "Filtrar palabra huevos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtrar palabra huevos": {
+      "main": [
+        [
+          {
+            "node": "Mandar DM con boton a WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mandar DM con boton a WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Responder el comentario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

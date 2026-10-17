@@ -1,0 +1,42 @@
+filters:
+  and:
+    - 'tipo == "producto"'
+    - not:
+        - file.inFolder("90 Plantillas")
+properties:
+  note.en_una_linea:
+    displayName: Para qué sirve
+  note.objetivos:
+    displayName: Objetivo
+views:
+  - type: cards
+    name: Catálogo
+    image: note.imagen
+    imageFit: cover
+    imageAspectRatio: 0.75
+    order:
+      - file.name
+      - en_una_linea
+      - objetivos
+      - semanas
+  - type: cards
+    name: Por categoría
+    groupBy:
+      property: categoria
+      direction: ASC
+    image: note.imagen
+    imageFit: cover
+    imageAspectRatio: 0.75
+    order:
+      - file.name
+      - en_una_linea
+      - objetivos
+  - type: table
+    name: Para completar
+    order:
+      - file.name
+      - categoria
+      - objetivos
+      - estado_tienda
+      - precio
+      - proveedor

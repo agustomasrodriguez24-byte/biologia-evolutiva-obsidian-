@@ -1,0 +1,112 @@
+{
+ "nodes": [
+  {
+   "id": "n161",
+   "type": "text",
+   "text": "# La naturaleza fabrica vida; la industria, plata\n\nSomos la primera generación que vive menos que la anterior.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n162",
+   "type": "text",
+   "text": "## La industria y la longevidad\n*El entorno*\n\nPor qué nadie te dice esto, y hacia dónde va todo: llegar a 100 entero.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n163",
+   "type": "text",
+   "text": "### La historia\n- Ancel Keys escondió países de su estudio\n- A John Yudkin ('es el azúcar') nadie le hizo caso\n- La industria del azúcar pagó para culpar a la grasa\n\n*Nutrillermo · Bayter*",
+   "x": -170,
+   "y": -630,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n165",
+   "type": "text",
+   "text": "### Quién manda\n- 10 empresas hacen casi toda la comida\n- Las compraron las tabacaleras\n- La pirámide la hizo Agricultura, que vende granos\n\n*Nutrillermo*",
+   "x": 652,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n167",
+   "type": "text",
+   "text": "### Los padres\n- Pilotean la nutrición de sus hijos sin saber volar\n- Tienen que aprender ellos\n- La salud es soberanía personal\n\n*Nutrillermo · Félix*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n169",
+   "type": "text",
+   "text": "### Llegar a 100\n- Para llegar a 100, evitá lo que mata\n- Sol, comer poco y de día, felicidad\n- Los centenarios viven afuera y creen en algo\n\n*Nutrillermo · Juan Bola*",
+   "x": -678,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n171",
+   "type": "text",
+   "text": "### Tu porqué\n- Durarles a tus hijos\n- Ser el abuelo que juega en el parque\n- Pedir con nombre y apellido: qué, por qué, cómo\n\n*Nutrillermo*",
+   "x": -992,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n173",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"La naturaleza fabrica alimentos que dan vida; el ser humano, alimentos que dan plata.\"\n> — **Nutrillermo**\n\n> \"El sistema nos enferma para vendernos salud.\"\n> — **Jorge Bayter**\n\n> \"Es más fácil engañar a alguien que convencerlo de que lo engañaron.\"\n> — **Nutrillermo**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 375
+  }
+ ],
+ "edges": [
+  {
+   "id": "e164",
+   "fromNode": "n161",
+   "toNode": "n163"
+  },
+  {
+   "id": "e166",
+   "fromNode": "n161",
+   "toNode": "n165"
+  },
+  {
+   "id": "e168",
+   "fromNode": "n161",
+   "toNode": "n167"
+  },
+  {
+   "id": "e170",
+   "fromNode": "n161",
+   "toNode": "n169"
+  },
+  {
+   "id": "e172",
+   "fromNode": "n161",
+   "toNode": "n171"
+  },
+  {
+   "id": "e174",
+   "fromNode": "n161",
+   "toNode": "n173"
+  }
+ ]
+}

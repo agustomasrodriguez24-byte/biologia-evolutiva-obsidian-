@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- MUESTRA de un recorrido de historias (tipo Juego: Mito o realidad). NO se publica.
+     Los .hueco marcan dónde va el sticker de Instagram: se ven punteados al abrir el index.html
+     y salen vacíos en la PNG. El sticker se pone en la app al subir. -->
+<html lang="es"><head><meta charset="utf-8"><title>Muestra · historias · mito o realidad</title>
+<link rel="stylesheet" href="../../../../../.claude/skills/carrusel/base.css"></head>
+<body class="paleta-alterna">
+
+<!-- 1 · Algo real a media pantalla + el anuncio del juego -->
+<section class="slide historia">
+  <div class="foto-mitad"><img src="../../Muestrario carrusel/img/foto-horizontal.jpg" alt=""></div>
+  <div class="cuerpo">
+    <span class="sticker">juego</span>
+    <h1>¿Mito o <span class="resalta">realidad?</span></h1>
+    <p class="suave">Dos frases que se dicen mucho. A ver cuántas sacás.</p>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 2 · Ronda 1 + sticker (encuesta) -->
+<section class="slide historia">
+  <div class="cuerpo" style="gap:18px">
+    <span class="mano grande resalta">Ronda 1</span>
+    <h1>"La frase que todo el mundo repite."</h1>
+    <div class="hueco">encuesta: Mito · Realidad</div>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 3 · Respuesta 1 -->
+<section class="slide historia clara">
+  <div class="cuerpo">
+    <span class="kicker">Ronda 1</span>
+    <h1>Es <span class="resalta">mito.</span></h1>
+    <p>La explicación en una línea, con <span class="marcador">lo que importa</span> marcado.</p>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 4 · Ronda 2 + sticker (quiz) -->
+<section class="slide historia">
+  <div class="cuerpo" style="gap:18px">
+    <span class="mano grande resalta">Ronda 2</span>
+    <h1>"Otra frase que se escucha siempre."</h1>
+    <div class="hueco">quiz: Mito · Realidad</div>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 5 · Respuesta 2 + cierre de golpe -->
+<section class="slide historia golpe">
+  <div class="cuerpo">
+    <h1>Es <span class="subrayado">realidad.</span></h1>
+    <p style="font-weight:600">Por qué, en una línea.</p>
+    <div class="hueco chico">deslizador: ¿cuántas sacaste?</div>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<script>const l=[...document.querySelectorAll('.slide')];const s=Number(new URLSearchParams(location.search).get('s'));if(s){document.body.classList.add('solo');l[s-1]?.classList.add('activa');}</script>
+</body></html>

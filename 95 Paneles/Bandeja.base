@@ -1,0 +1,28 @@
+filters:
+  and:
+    - tipo == "entrada"
+    - not:
+        - file.inFolder("90 Plantillas")
+views:
+  - type: table
+    name: Pendientes
+    filters:
+      and:
+        - estado == "pendiente"
+    order:
+      - file.name
+      - origen
+      - url
+      - fecha_creacion
+    sort:
+      - property: fecha_creacion
+        direction: ASC
+  - type: table
+    name: Procesadas
+    filters:
+      and:
+        - estado != "pendiente"
+    order:
+      - file.name
+      - estado
+      - fecha_creacion

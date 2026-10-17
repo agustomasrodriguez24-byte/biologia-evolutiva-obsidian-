@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"n254","type":"text","text":"# La web\n\nTienda + test + contenido.\n\n**Código propio (Next.js + Supabase + Vercel). Sin pasarela: el pedido va a WhatsApp.**","x":-320,"y":-130,"width":640,"height":260,"color":"6"},
+		{"id":"n255","type":"text","text":"### 1. Entra la persona\n- Anuncio, Instagram o boca a boca\n- Landing por producto con su ángulo","x":-1050,"y":330,"width":390,"height":200,"color":"5"},
+		{"id":"n257","type":"text","text":"### 2. Hace el test\n- 5 objetivos: dormir, presión, fuerza, digestión, nutrición\n- Las preguntas salen de las 18 semanas","x":-620,"y":330,"width":390,"height":200,"color":"3"},
+		{"id":"n259","type":"text","text":"### 3. Ve su resultado\n- Semáforo y su primera semana\n- Deja su WhatsApp para el plan","x":-190,"y":330,"width":390,"height":200,"color":"4"},
+		{"id":"n261","type":"text","text":"### 4. Recibe el plan\n- Plan de 4 semanas por WhatsApp\n- Productos alineados a cada hábito","x":240,"y":330,"width":390,"height":200,"color":"4"},
+		{"id":"n263","type":"text","text":"### 5. Compra\n- Tienda → mensaje armado a WhatsApp\n- Pago: transferencia, efectivo, link de Mercado Pago","x":670,"y":330,"width":390,"height":200,"color":"1"},
+		{"id":"n265","type":"text","text":"## Documentos de la web\n- [[Especificación web]]\n- [[Brief para desarrollo]]\n- [[Arquitectura del flujo]]\n- [[Hoja de ruta web]]\n- [[Referencias de diseño]]\n- [[Estado - Web]]","x":-1050,"y":-420,"width":420,"height":300},
+		{"id":"n266","type":"text","text":"## Código y equipo\n- Repo: github.com/aaavril/Nutricion-Evolutiva-Web\n- Avril programa con BMAD\n- Brief del producto: en pausa (3 preguntas abiertas)\n- Commits directo a `main`","x":630,"y":-420,"width":420,"height":260},
+		{"id":"n267","type":"text","text":"## De dónde saca el contenido\nCada semana de `18 Sistema de salud` tiene:\n- texto para la web\n- pregunta del test\n- productos\n\nCuando una semana pasa a `activo`, se pasa al repo.","x":630,"y":-100,"width":420,"height":300,"color":"4"}
+	],
+	"edges":[
+		{"id":"e256","fromNode":"n254","toNode":"n255","fromSide":"bottom","toSide":"right"},
+		{"id":"e258","fromNode":"n255","toNode":"n257","fromSide":"right","toSide":"left"},
+		{"id":"e260","fromNode":"n257","toNode":"n259","fromSide":"right","toSide":"left"},
+		{"id":"e262","fromNode":"n259","toNode":"n261","fromSide":"right","toSide":"left"},
+		{"id":"e264","fromNode":"n261","toNode":"n263","fromSide":"right","toSide":"left"},
+		{"id":"e268","fromNode":"n254","toNode":"n265","fromSide":"left","toSide":"right"},
+		{"id":"e269","fromNode":"n254","toNode":"n266","fromSide":"right","toSide":"left"},
+		{"id":"e270","fromNode":"n267","toNode":"n254","label":"alimenta","fromSide":"left","toSide":"right"}
+	]
+}

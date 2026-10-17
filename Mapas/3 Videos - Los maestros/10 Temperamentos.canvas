@@ -1,0 +1,114 @@
+{
+ "nodes": [
+  {
+   "id": "n131",
+   "type": "text",
+   "text": "# El biotipo es el vehículo que habitás\n\nConocerlo da libertad y compasión, y cambia cómo come, enferma y aprende cada uno.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n132",
+   "type": "text",
+   "text": "## Temperamentos\n*El yo*\n\nCada persona habita un vehículo distinto. Los cuatro temperamentos de Hipócrates, la misma raíz que la medicina unani.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n133",
+   "type": "text",
+   "text": "### Sanguíneo · aire\n- Comelón, aguanta más\n- La grasa va al músculo\n- Enferma por excesos\n- Quiere saber cuándo puede salirse con la suya\n\n*García Platas · Duarte*",
+   "x": -170,
+   "y": -645,
+   "width": 340,
+   "height": 250,
+   "color": "3"
+  },
+  {
+   "id": "n135",
+   "type": "text",
+   "text": "### Colérico · fuego\n- Guerrero, lo hace a su modo\n- Infarto, piel\n- Poco picante, salvo en otoño\n\n*García Platas · Duarte*",
+   "x": 652,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n137",
+   "type": "text",
+   "text": "### Melancólico · tierra\n- Cuestiona y analiza todo\n- Grasa visceral y tardía\n- Gastritis y colitis\n\n*García Platas · Duarte*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n139",
+   "type": "text",
+   "text": "### Flemático · agua\n- Necesita acompañamiento\n- Se inflama con harinas y lácteos\n- Grasa bajo la piel\n\n*García Platas · Duarte*",
+   "x": -678,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n141",
+   "type": "text",
+   "text": "### Por qué importa\n- Cada uno aprende distinto\n- Melancólicos y coléricos: teoría\n- Flemáticos y sanguíneos: paso a paso\n- Así nació el Programa Paso a Paso\n\n*Duarte*",
+   "x": -992,
+   "y": -203,
+   "width": 340,
+   "height": 250,
+   "color": "6"
+  },
+  {
+   "id": "n143",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"El biotipo es el vehículo que habitás.\"\n> — **Rodrigo García Platas**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 185,
+   "color": "6"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e134",
+   "fromNode": "n131",
+   "toNode": "n133"
+  },
+  {
+   "id": "e136",
+   "fromNode": "n131",
+   "toNode": "n135"
+  },
+  {
+   "id": "e138",
+   "fromNode": "n131",
+   "toNode": "n137"
+  },
+  {
+   "id": "e140",
+   "fromNode": "n131",
+   "toNode": "n139"
+  },
+  {
+   "id": "e142",
+   "fromNode": "n131",
+   "toNode": "n141"
+  },
+  {
+   "id": "e144",
+   "fromNode": "n131",
+   "toNode": "n143"
+  }
+ ]
+}

@@ -1,0 +1,267 @@
+/* Carrusel e historias · el estilo del sistema de contenido.
+   Se diseña a 540 x 675 px de CSS y se exporta al doble: 1080 x 1350 (4:5). Historias: 540 x 960 → 1080 x 1920.
+   Cómo se usa → Áreas/Contenido/Templates/Estilo de carrusel.md
+
+   Tres reglas que ordenan todo:
+   1. Una paleta por publicación (la clase va en <body>): todas las láminas de la misma familia de color.
+   2. El texto manda: títulos enormes, que ocupen el ancho. Si sobra aire, se agranda la letra.
+   3. La firma (logo + @cuenta) abajo a la izquierda en todas las láminas. No hay contador: Instagram ya lo pone.
+
+   Los COLORES, las LETRAS y el LOGO no se cambian acá: salen de Empresa/Marca/marca.json, que
+   aplicar-marca.py convierte en marca.css (al lado de este archivo). */
+@import url("../../../Áreas/Contenido/herramientas/fuentes/fuentes.css");
+@import url("marca.css");
+
+html, body { margin: 0; background: #d9d9d9; }
+body { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; }
+* { box-sizing: border-box; }
+
+/* ───────── Colores: un mismo estilo, varias paletas de UNA familia cada una ─────────
+   El estilo es uno solo (lámina de base, una o dos claras, una de golpe). Lo que cambia de una
+   publicación a otra es la PALETA, que va en <body class="paleta-NOMBRE">. Las paletas y sus
+   nombres están en marca.json. No se mezclan familias dentro de una publicación. */
+.slide { --logo: var(--b-logo); --fondo: var(--b-fondo); --tinta: var(--b-tinta); --suave: var(--b-suave); --acento: var(--b-acento); --linea: var(--b-linea);
+  --sticker-tinta: var(--mk-tinta-oscura); }
+/* UN color por lámina: fondo + tinta + un solo acento, todos de la familia de la paleta.
+   Stickers, marcador, círculo de luz, barra, etiquetas y palabras resaltadas usan ese mismo acento. */
+.slide { --sticker: var(--acento); --sticker-2: var(--acento); }
+/* Lámina clara: una o dos por carrusel, para cortar el ritmo y mostrar una foto */
+.slide.clara { --logo: var(--c-logo); --fondo: var(--c-fondo); --tinta: var(--c-tinta); --suave: var(--c-suave); --acento: var(--c-acento); --linea: var(--c-linea); }
+/* Lámina de golpe: UNA sola, la que más importa (el dato, el cierre) */
+.slide.golpe { --logo: var(--g-logo); --fondo: var(--g-fondo); --tinta: var(--g-tinta); --suave: var(--g-suave); --acento: var(--g-acento); --linea: var(--g-linea); }
+.slide.golpe .sticker { color: var(--fondo); }
+.slide.golpe .marcador { background: var(--tinta); color: var(--fondo); }
+.slide.golpe .barra { background: var(--g-tinta); color: var(--g-fondo); }
+
+/* ───────── La lámina ───────── */
+.slide {
+  position: relative; width: 540px; height: 675px; overflow: hidden; flex: none;
+  background: var(--fondo); color: var(--tinta); font-family: var(--f-texto);
+  padding: 48px 48px 40px; display: flex; flex-direction: column;
+}
+.slide > * { position: relative; z-index: 1; }
+/* .cuerpo agrupa el contenido y va centrado en alto: así no queda la mitad de abajo vacía.
+   Con .arriba arranca arriba (cuando hay foto abajo o mucho texto) */
+.slide .cuerpo { display: flex; flex-direction: column; gap: 20px; margin-block: auto; }
+.slide.arriba .cuerpo { margin-top: 28px; }
+.cuerpo + .firma { margin-top: 0; }
+.cuerpo + .franja { margin-top: 26px; }
+.slide.centrada .cuerpo { align-items: center; text-align: center; }
+
+/* Modo exportación: render.py pide ?s=N y queda una sola lámina, sin márgenes */
+body.solo { padding: 0; gap: 0; background: none; }
+body.solo .slide:not(.activa) { display: none; }
+
+/* ───────── Tipografía ───────── */
+h1, h2, h3, p { margin: 0; }
+h1 { font-family: var(--f-titulo); font-weight: 800; font-size: 62px; line-height: .98; letter-spacing: -0.04em; }
+h1.xl { font-size: 76px; }
+h2 { font-family: var(--f-titulo); font-weight: 800; font-size: 44px; line-height: 1.06; letter-spacing: -0.03em; }
+h3 { font-family: var(--f-titulo); font-weight: 800; font-size: 24px; line-height: 1.2; text-transform: uppercase; letter-spacing: .01em; }
+p { font-size: 23px; line-height: 1.4; font-weight: 500; letter-spacing: -0.005em; }
+.suave { color: var(--suave); }
+p.chico { font-size: 18px; }
+.kicker { font-family: var(--f-titulo); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .16em; color: var(--suave); }
+em { font-style: italic; }
+/* La palabra que importa: color de acento. Una o dos por lámina */
+.resalta { color: var(--acento); font-weight: 700; }
+/* Marcador: la frase pintada con resaltador, tinta negra encima */
+.marcador { background: var(--acento); color: var(--fondo); padding: 0 6px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Subrayado a mano debajo de una palabra, en el color de acento de la paleta */
+.subrayado { position: relative; display: inline-block; }
+.subrayado::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 12px; background: var(--acento);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 50 2, 120 12, 198 4' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 50 2, 120 12, 198 4' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat; }
+
+/* Letra a mano: solo acentos. "Paso #01", una nota al costado, "deslizá" */
+.mano { font-family: var(--f-mano); font-weight: 700; font-size: 44px; line-height: 1; letter-spacing: 0; }
+.mano.grande { font-size: 76px; }
+.mano.chica { font-size: 30px; font-weight: 500; }
+
+/* ───────── Stickers: etiquetas inclinadas alrededor del título ───────── */
+.sticker { display: inline-block; align-self: flex-start; font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  line-height: 1; padding: 8px 14px 7px; border-radius: 999px; background: var(--sticker); color: var(--fondo);
+  transform: rotate(-4deg); white-space: nowrap; }
+.sticker.dos { background: var(--sticker-2); transform: rotate(3deg); }
+.sticker.flota { position: absolute; z-index: 2; } /* se ubica con style="top:..;left:.." */
+/* Pegado al título: va justo antes del h1, a la derecha, montado sobre la primera línea */
+.sticker.encima { align-self: flex-end; margin: 0 -6px -26px 0; z-index: 2; }
+
+/* ───────── Firma: abajo a la izquierda, en todas ───────── */
+.firma { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 12px; font-family: var(--font-body); }
+.firma .iso { width: 116px; height: 50px; flex: none; background: var(--logo) left center / contain no-repeat; }
+/* En la lámina de golpe el logo va sobre una pastilla blanca: así el logo se lee sobre cualquier color de golpe */
+.slide.golpe .firma .iso { width: 104px; height: 40px; padding: 5px 10px; box-sizing: content-box; background-color: #fff; background-origin: content-box; border-radius: 10px; background-image: var(--logo-claro); }
+.firma .iso + div { padding-left: 12px; border-left: 1.5px solid var(--linea); }
+/* Logo grande: arriba de la portada o en el cierre */
+.logo-grande { width: 190px; height: 84px; flex: none; background: var(--logo) left center / contain no-repeat; }
+.firma b { display: block; font-family: var(--font-display); font-weight: 600; font-size: 15px; line-height: 1.2; }
+.firma span { display: block; font-size: 13px; line-height: 1.25; color: var(--suave); }
+.firma .deslizar { margin-left: auto; font-family: var(--f-mano); font-weight: 700; font-size: 30px; color: var(--acento); display: flex; align-items: center; gap: 6px; }
+.firma .deslizar::after { content: ""; width: 44px; height: 18px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 18'%3E%3Cpath d='M2 11 C 14 4, 28 15, 40 8 M32 3 L41 8 L33 15' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 18'%3E%3Cpath d='M2 11 C 14 4, 28 15, 40 8 M32 3 L41 8 L33 15' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+
+/* ───────── Piezas ───────── */
+
+/* Pasos numerados con línea fina entre uno y otro. Un <em> adentro es la nota a mano */
+.pasos { list-style: none; margin: 0; padding: 0; counter-reset: paso; }
+.pasos li { counter-increment: paso; display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 11px 0;
+  border-top: 1.5px solid var(--linea); font-size: 19px; line-height: 1.38; }
+.pasos li:last-child { border-bottom: 1.5px solid var(--linea); }
+.pasos li::before { content: counter(paso); font-family: var(--f-mano); font-weight: 700; font-size: 36px; line-height: .85; color: var(--acento); }
+.pasos li > em { grid-column: 2; display: block; margin-top: 4px; font-family: var(--f-mano); font-style: normal; font-weight: 700; font-size: 27px; line-height: 1.05; color: var(--acento); }
+
+/* Recuadro dibujado a mano, con una palabra adentro (la etiqueta de cada fila) */
+.recuadro { display: inline-block; justify-self: start; font-family: var(--f-mano); font-weight: 700; font-size: 30px; line-height: 1;
+  padding: 6px 12px 4px; border: 2.5px solid currentColor; border-radius: 6px 14px 5px 12px / 12px 5px 14px 6px; transform: rotate(-2deg); }
+.filas { display: flex; flex-direction: column; gap: 20px; }
+.fila { display: grid; grid-template-columns: 130px 1fr; gap: 16px; align-items: start; }
+.fila p { font-family: var(--f-texto); font-weight: 600; font-size: 18px; line-height: 1.38; }
+
+/* Barra: el aviso que no se puede saltear */
+.barra { background: var(--acento); color: var(--fondo); padding: 14px 18px; font-family: var(--f-texto); font-weight: 600; font-size: 18px; line-height: 1.35; }
+
+/* Captura: una prueba real (reseña de Google, mensaje de un alumno). Inclinada apenas */
+.captura { background: #fff; color: var(--mk-tinta-oscura); border-radius: 10px; box-shadow: 0 14px 30px rgba(0,0,0,.28); padding: 16px 18px; transform: rotate(-1.5deg); font-size: 16px; line-height: 1.4; }
+.captura.dos { transform: rotate(1.8deg); }
+.captura img { display: block; width: 100%; border-radius: 6px; }
+
+/* Fotos */
+.foto-caja { width: 100%; height: 250px; overflow: hidden; flex: none; }
+.foto-caja img, .foto-esquina img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bn img { filter: grayscale(1) contrast(1.05); }
+/* Foto que se sale por un borde: arriba a la derecha por defecto */
+.foto-esquina { position: absolute !important; z-index: 0 !important; top: 0; right: 0; width: 180px; height: 165px; overflow: hidden; }
+.foto-esquina.izq { right: auto; left: 0; }
+
+/* Eco: texto repetido muy tenue de fondo, como textura (la idea del carrusel, repetida) */
+.eco { position: absolute !important; inset: -10px; z-index: 0 !important; font-family: var(--font-body); font-size: 15px; line-height: 1.55;
+  text-align: justify; color: var(--tinta); opacity: .07; overflow: hidden; pointer-events: none; }
+
+/* Frases: foto de fondo con velo, la frase grande abajo, franja de marca al pie */
+.slide.foto { padding-bottom: 0; color: #fff; --tinta: #fff; --suave: rgba(255,255,255,.8); }
+.slide.foto > img.fondo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.slide.foto > .velo { position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(6,8,6,.3) 0%, rgba(6,8,6,.55) 45%, rgba(6,8,6,.9) 100%); }
+.frase { font-family: var(--f-frase); font-weight: 800; font-size: 46px; line-height: 1.0; letter-spacing: -0.035em; }
+.frase .resalta { font-weight: 800; }
+.franja { margin: 24px -48px 0; padding: 14px 48px; background: var(--acento); color: var(--mk-tinta-oscura); display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 15px; }
+.franja .mano { font-size: 28px; }
+
+/* Cierre: un solo CTA */
+.boton { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; background: var(--acento); color: var(--fondo);
+  font-family: var(--font-display); font-weight: 700; font-size: 20px; padding: 14px 24px; border-radius: 999px; }
+.boton.wa { background: var(--mk-whatsapp); color: var(--mk-tinta-oscura); }
+
+/* Cifra: el número que manda (Dato, Oferta) */
+.cifra { font-family: var(--f-titulo); font-weight: 900; font-size: 130px; line-height: .9; letter-spacing: -0.05em; color: var(--acento); }
+
+/* ───────── Piezas de la versión 1, adaptadas al tema ───────── */
+.bloque { background: rgba(255,255,255,.08); border: 2px solid var(--linea); border-radius: var(--radius-card); padding: 22px; }
+.slide.clara .bloque, .slide.golpe .bloque { background: rgba(255,255,255,.55); }
+.etiqueta { display: inline-block; align-self: flex-start; font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  text-transform: uppercase; letter-spacing: .14em; padding: 6px 12px; border-radius: 999px; background: var(--sticker-2); color: var(--mk-tinta-oscura); }
+.etiqueta { background: var(--acento); color: var(--fondo); }
+.etiqueta.mito { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 2px currentColor; }
+.tachado { text-decoration: line-through; text-decoration-thickness: 4px; text-decoration-color: var(--acento); }
+.check { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 23px; }
+.check li { display: flex; gap: 14px; align-items: flex-start; font-size: inherit; line-height: 1.38; }
+.check li::before { content: ""; flex: none; width: 26px; height: 26px; margin-top: 4px; border: 2.5px solid currentColor; border-radius: 5px 8px 4px 7px; }
+.ficha { display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; font-size: 19px; line-height: 1.35; }
+.ficha dt { font-family: var(--f-titulo); font-weight: 700; }
+.ficha dd { margin: 0; }
+.cita { font-family: var(--f-frase); font-weight: 800; font-size: 40px; line-height: 1.05; letter-spacing: -0.03em; }
+.cita::before { content: "“"; display: block; font-size: 96px; line-height: .55; color: var(--acento); }
+.contador { display: none; }
+.tabla { width: 100%; border-collapse: collapse; font-size: 17px; }
+.tabla th, .tabla td { text-align: left; padding: 10px 8px; border-bottom: 1.5px solid var(--linea); }
+.tabla th { font-family: var(--f-titulo); font-weight: 700; }
+
+/* ───────── De la inspo de fuentes (@adarshxdesign) ───────── */
+/* Meta: fila chiquita arriba de todo, tres datos repartidos */
+.meta { display: flex; justify-content: space-between; font-family: var(--f-titulo); font-weight: 700; font-size: 12px; letter-spacing: -0.01em; color: var(--suave); }
+/* Insignia: el número en un círculo negro ("#5") */
+.insignia { display: inline-grid; place-items: center; align-self: center; width: 62px; height: 62px; border-radius: 50%;
+  background: var(--mk-tinta-oscura); color: #fff; font-family: var(--f-titulo); font-weight: 800; font-size: 26px; letter-spacing: -0.03em; }
+.insignia { background: var(--acento); color: var(--mk-tinta-oscura); }
+.slide.clara .insignia { background: var(--tinta); color: var(--fondo); }
+/* Partida: foto arriba, panel liso abajo. La foto lleva .partida-foto y el resto va en .partida-panel */
+.slide.partida { padding: 0; }
+.partida-foto { position: relative; height: 47%; overflow: hidden; flex: none; }
+.partida-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.partida-foto::after { content: ""; position: absolute; inset: 0; background: rgba(6,8,6,.55); }
+.partida-foto .frase { text-shadow: 0 4px 18px rgba(0,0,0,.6); }
+.partida-foto > :not(img) { position: relative; z-index: 1; }
+.partida-foto .meta { padding: 22px 32px 0; color: rgba(255,255,255,.9); }
+.partida-foto .sobre { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: #fff; padding: 0 28px; }
+.partida-panel { flex: 1; display: flex; flex-direction: column; padding: 28px 48px 34px; }
+/* Recorrido: la línea con los números de lámina y la actual marcada */
+.recorrido { display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 2px solid var(--tinta);
+  font-family: var(--f-titulo); font-weight: 700; font-size: 12px; letter-spacing: .02em; }
+.recorrido b { background: var(--tinta); color: var(--fondo); border-radius: 999px; padding: 2px 7px; }
+
+/* ───────── Para que la base no quede plana ───────── */
+/* Foto con marco: foto a color o en blanco y negro, con borde fino y un poco inclinada */
+.foto-marco { position: relative; overflow: hidden; border: 6px solid #fff; box-shadow: 0 16px 34px rgba(0,0,0,.35); transform: rotate(-2deg); flex: none; }
+.foto-marco.dos { transform: rotate(2.5deg); }
+.foto-marco img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Círculo de luz: un círculo grande del acento, cortado por el borde, de fondo */
+.luz { position: absolute !important; z-index: 0 !important; border-radius: 50%; background: var(--acento); opacity: .14; width: 360px; height: 360px; right: -140px; top: -120px; }
+.luz.abajo { top: auto; bottom: -160px; right: auto; left: -120px; }
+
+/* Número de paso grande a mano, en el acento, al costado del título */
+.paso-num { font-family: var(--f-mano); font-weight: 700; font-size: 120px; line-height: .7; color: var(--acento); }
+.slide.golpe .insignia { background: var(--tinta); color: var(--fondo); }
+
+/* UN logo por lámina: si la lámina tiene el logo grande, la firma queda solo con la cuenta */
+.slide:has(.logo-grande) .firma .iso { display: none; }
+.slide:has(.logo-grande) .firma .iso + div { padding-left: 0; border-left: 0; }
+
+/* ───────── Fotos: media lámina, sin bordes ─────────
+   La foto ocupa la mitad de arriba de punta a punta, sin marco, sin inclinar, sin redondear.
+   El texto va abajo, sobre el color de la lámina. .abajo la pone en la mitad de abajo.
+   .foto-marco, .foto-caja y .foto-esquina quedan solo por compatibilidad: no se usan más. */
+.foto-mitad { margin: -48px -48px 0; height: 300px; flex: none; overflow: hidden; }
+.foto-mitad img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.foto-mitad.alta { height: 360px; }
+.foto-mitad.abajo { margin: 0 -48px -40px; order: 99; }
+.slide:has(.foto-mitad.abajo) .firma { padding-bottom: 16px; }
+/* Con foto, la firma va sin logo: la foto ya dice de quién es */
+.slide:has(.foto-mitad) .firma .iso { display: none; }
+.slide:has(.foto-mitad) .firma .iso + div { padding-left: 0; border-left: 0; }
+
+/* ───────── Historias (1080 x 1920) ─────────
+   Mismo estilo y paletas que los carruseles. Lo de arriba (barras y nombre) y lo de abajo
+   (la caja para responder) lo tapa Instagram: el texto va entre 250 y 1580 px. */
+.slide.historia { width: 540px; height: 960px; padding: 125px 40px 150px; }
+.slide.historia h1 { font-size: 60px; }
+.slide.historia h1.xl { font-size: 70px; }
+.slide.historia .foto-mitad { margin: -125px -40px 0; height: 430px; }
+.slide.historia .firma { position: absolute; left: 40px; right: 40px; bottom: 120px; }
+/* Hueco: el lugar donde va el sticker de Instagram (encuesta, pregunta, quiz, link, cuenta regresiva).
+   Se ve punteado al abrir el index.html y queda vacío en la PNG: el sticker se pone en la app */
+.hueco { flex: none; height: 150px; border-radius: 18px; display: grid; place-items: center; text-align: center;
+  font-family: var(--f-mano); font-size: 26px; color: transparent; }
+.hueco.chico { height: 90px; }
+.hueco.grande { height: 230px; }
+body:not(.solo) .hueco { outline: 2.5px dashed currentColor; color: var(--suave); outline-color: var(--suave); }
+.slide.historia .pasos li { font-size: 22px; padding: 14px 0; }
+
+/* Las otras dos formas de foto, además de la media lámina:
+   B · redondeada: ancha, esquinas redondeadas, derecha, entre el título y el texto
+   F · con marco de color: borde del acento de la lámina y una etiqueta adentro (.sticker) */
+.foto-redonda, .foto-marco-color { position: relative; width: 100%; height: 230px; flex: none; overflow: hidden; }
+.foto-redonda { border-radius: 26px; }
+.foto-marco-color { border: 6px solid var(--acento); border-radius: 18px; }
+.foto-redonda img, .foto-marco-color img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.foto-marco-color .sticker { position: absolute; left: 14px; bottom: 14px; transform: rotate(-3deg); }
+.slide.historia .foto-redonda, .slide.historia .foto-marco-color { height: 300px; }
+.slide:has(.foto-redonda) .firma .iso, .slide:has(.foto-marco-color) .firma .iso { display: none; }
+.slide:has(.foto-redonda) .firma .iso + div, .slide:has(.foto-marco-color) .firma .iso + div { padding-left: 0; border-left: 0; }
+
+/* LinkedIn: <body class="paleta-principal linkedin">. Número de lámina arriba a la derecha (LinkedIn no lo
+   muestra y ver el final sube cuántos llegan al último); render.py además arma carrusel.pdf */
+body.linkedin .slide::after { content: attr(data-n); position: absolute; top: 26px; right: 30px;
+  font-family: var(--font-body); font-size: 15px; font-weight: 600; letter-spacing: .04em; opacity: .7; }
+body.linkedin .deslizar { display: none; }

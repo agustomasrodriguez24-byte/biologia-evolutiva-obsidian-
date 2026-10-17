@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"n209","type":"text","text":"# Una fuente, muchas salidas\n\nCada hábito trae su biología, su pregunta del test, su contenido y su producto.","x":-260,"y":-110,"width":520,"height":220,"color":"4"},
+		{"id":"n210","type":"text","text":"## Cómo alimenta todo\n*Nuestro sistema*\n\nCada semana es una nota con todo adentro. De ahí salen la web, el test, el contenido y la tienda.","x":-260,"y":-420,"width":520,"height":220},
+		{"id":"n211","type":"text","text":"### Web\n- Texto de cada hábito cuando está aprobado\n- Lo lee la web de Avril desde el repo\n\n*Sección 8*","x":262,"y":-529,"width":340,"height":190,"color":"5"},
+		{"id":"n213","type":"text","text":"### Test\n- Una pregunta por semana\n- 5 objetivos: dormir, presión, fuerza, digestión, nutrición\n- Te dice por qué semana empezar\n\n*Sección 7*","x":694,"y":10,"width":340,"height":220,"color":"3"},
+		{"id":"n215","type":"text","text":"### WhatsApp\n- Plan de 4 semanas según el resultado\n- Seguimiento semanal de 1 minuto\n\n*Plan*","x":262,"y":579,"width":340,"height":190,"color":"4"},
+		{"id":"n217","type":"text","text":"### Contenido\n- Imagen, 3 hooks, carrusel\n- La biología en simple\n- Agus como caso 0\n\n*Sección 6*","x":-602,"y":564,"width":340,"height":220,"color":"6"},
+		{"id":"n219","type":"text","text":"### Tienda\n- Un producto por hábito\n- Lentes ámbar, huevos, sal marina y suero, vinagre y quesos azules\n\n*Sección 9*","x":-1034,"y":25,"width":340,"height":190,"color":"1"},
+		{"id":"n221","type":"text","text":"### Órganos\n- Cada órgano lista sus semanas\n- Primer órgano: ojos y cerebro (el reloj)\n\n*16 Órganos*","x":-602,"y":-529,"width":340,"height":190},
+		{"id":"n223","type":"text","text":"## El test por objetivos\n\n| Objetivo del cliente | Semanas que lo alimentan |\n|---|---|\n| Dormir | 1, 2, 3, 4, 13, 14, 15, 16, 17 |\n| Presión | 3, 4, 5, 7, 9, 11, 17 |\n| Fuerza | 6, 8, 11, 12, 13, 14 |\n| Digestión | 3, 7, 10, 16 |\n| Nutrición | 5, 6, 7, 8, 9, 10 |","x":-550,"y":1000,"width":1100,"height":330}
+	],
+	"edges":[
+		{"id":"e212","fromNode":"n209","toNode":"n211","fromSide":"top","toSide":"bottom"},
+		{"id":"e214","fromNode":"n209","toNode":"n213","fromSide":"right","toSide":"left"},
+		{"id":"e216","fromNode":"n209","toNode":"n215","fromSide":"bottom","toSide":"top"},
+		{"id":"e218","fromNode":"n209","toNode":"n217","fromSide":"bottom","toSide":"top"},
+		{"id":"e220","fromNode":"n209","toNode":"n219","fromSide":"left","toSide":"right"},
+		{"id":"e222","fromNode":"n209","toNode":"n221","fromSide":"top","toSide":"bottom"},
+		{"id":"e224","fromNode":"n209","toNode":"n223","fromSide":"bottom","toSide":"top"}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"n195","type":"text","text":"# El paso a paso\n\nPrimero el reloj, después el cuerpo vegetal, el animal y el yo.","x":-260,"y":-110,"width":520,"height":220,"color":"4"},
+		{"id":"n196","type":"text","text":"## Las 18 semanas\n*Nuestro sistema*\n\nEl Sistema de salud Nutrición Evolutiva: un hábito por semana, de adentro hacia afuera.","x":-260,"y":-420,"width":520,"height":220},
+		{"id":"n197","type":"text","text":"### Darse cuenta\n*Semana 0*\n- Observar sin cambiar\n- Hacer el test\n- Objetivo y porqué","x":-900,"y":260,"width":270,"height":220},
+		{"id":"n199","type":"text","text":"### El reloj\n*Semanas 1–4*\n- Luz de mañana\n- Noche oscura\n- Comer de día\n- Sueño regular","x":-600,"y":260,"width":270,"height":250,"color":"3"},
+		{"id":"n201","type":"text","text":"### Cuerpo vegetal\n*Semanas 5–10*\n- Fuera el azúcar\n- Desayuno salado\n- Fuera pan, pasta y harinas\n- Plato denso\n- Agua con sal\n- Flora viva","x":-300,"y":260,"width":270,"height":310,"color":"4"},
+		{"id":"n203","type":"text","text":"### Cuerpo animal\n*Semanas 11–14*\n- Caminar\n- Fuerza\n- Respirar y estirar\n- Descalzo en la tierra","x":0,"y":260,"width":270,"height":250,"color":"1"},
+		{"id":"n205","type":"text","text":"### Cuerpo del yo\n*Semanas 15–18*\n- Ritual de la mañana\n- Darse cuenta\n- Mesa compartida\n- Propósito","x":300,"y":260,"width":270,"height":250,"color":"6"},
+		{"id":"n207","type":"text","text":"### Vivir el sistema\n*Siempre*\n- Ventanas cortas y ayuno\n- Estaciones\n- 3 reglas de oro","x":600,"y":260,"width":270,"height":220,"color":"5"}
+	],
+	"edges":[
+		{"id":"e198","fromNode":"n195","toNode":"n197","fromSide":"bottom","toSide":"right"},
+		{"id":"e200","fromNode":"n197","toNode":"n199","fromSide":"right","toSide":"left"},
+		{"id":"e202","fromNode":"n199","toNode":"n201","fromSide":"right","toSide":"left"},
+		{"id":"e204","fromNode":"n201","toNode":"n203","fromSide":"right","toSide":"left"},
+		{"id":"e206","fromNode":"n203","toNode":"n205","fromSide":"right","toSide":"left"},
+		{"id":"e208","fromNode":"n205","toNode":"n207","fromSide":"right","toSide":"left"}
+	]
+}

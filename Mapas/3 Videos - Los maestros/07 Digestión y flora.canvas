@@ -1,0 +1,114 @@
+{
+ "nodes": [
+  {
+   "id": "n87",
+   "type": "text",
+   "text": "# Somos osos, no vacas\n\nSolo la grasa y la proteína generan bilis, y la bilis deja el intestino alcalino, humano.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n88",
+   "type": "text",
+   "text": "## Digestión y flora\n*Lo que entra*\n\nEl intestino es la raíz: lo que le pasa se ve en la piel, el ánimo y las defensas.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n89",
+   "type": "text",
+   "text": "### Cómo funciona\n- Todo lo que entra genera ácido en el estómago\n- La bilis (pH 12–13) es 'lejía' para la grasa\n- Fruta sola → sin bilis → flora 'de vaca'\n\n*Duarte*",
+   "x": -170,
+   "y": -630,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "n91",
+   "type": "text",
+   "text": "### Qué la arregla\n- Vinagre vivo con madre: 'una farmacia ambulante'\n- Queso azul: 'penicilina en microdosis'\n- Hierbas amargas: diente de león, boldo, cardo mariano\n\n*Duarte*",
+   "x": 652,
+   "y": -188,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n93",
+   "type": "text",
+   "text": "### Cómo comer\n- Comer es un acto sagrado\n- 3 respiraciones, agradecer, sin pantallas\n- Sentado, masticando, tranquilo\n\n*Nutrillermo*",
+   "x": 338,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "6"
+  },
+  {
+   "id": "n95",
+   "type": "text",
+   "text": "### La piel habla\n- La piel es el espejo del intestino y del hígado\n- Las cremas tapan la salida\n- Manchas = hígado cansado\n\n*Duarte*",
+   "x": -678,
+   "y": 528,
+   "width": 340,
+   "height": 220,
+   "color": "3"
+  },
+  {
+   "id": "n97",
+   "type": "text",
+   "text": "### Tu fábrica\n- La flora fabrica nutrientes\n- 70 % de las defensas en el intestino\n- 90 % de la serotonina, también\n\n*Duarte · Nutrillermo*",
+   "x": -992,
+   "y": -188,
+   "width": 340,
+   "height": 220
+  },
+  {
+   "id": "n99",
+   "type": "text",
+   "text": "## Cómo lo dicen\n\n> \"Si el queso azul te da asco, tenés la flora opuesta.\"\n> — **David Duarte**\n\n> \"No te cayó mal la carne: le caíste mal vos al alimento.\"\n> — **Nutrillermo**",
+   "x": -450,
+   "y": 1000,
+   "width": 900,
+   "height": 280,
+   "color": "4"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e90",
+   "fromNode": "n87",
+   "toNode": "n89"
+  },
+  {
+   "id": "e92",
+   "fromNode": "n87",
+   "toNode": "n91"
+  },
+  {
+   "id": "e94",
+   "fromNode": "n87",
+   "toNode": "n93"
+  },
+  {
+   "id": "e96",
+   "fromNode": "n87",
+   "toNode": "n95"
+  },
+  {
+   "id": "e98",
+   "fromNode": "n87",
+   "toNode": "n97"
+  },
+  {
+   "id": "e100",
+   "fromNode": "n87",
+   "toNode": "n99"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+filters:
+  and:
+    - 'tipo == "producto"'
+    - not:
+        - file.inFolder("90 Plantillas")
+views:
+  - type: table
+    name: Catálogo por estado
+    groupBy:
+      property: estado_tienda
+      direction: ASC
+    order:
+      - file.name
+      - categoria
+      - necesidad
+      - alineacion
+      - evidencia_producto
+      - nivel_promesa
+      - contenido
+  - type: table
+    name: Sin video de valor
+    filters:
+      and:
+        - 'estado_tienda == "aprobado" || estado_tienda == "aprobado-con-condiciones"'
+        - contenido.isEmpty()
+    order:
+      - file.name
+      - categoria
+      - alineacion
+  - type: table
+    name: Sin alineación
+    filters:
+      and:
+        - alineacion.isEmpty()
+    order:
+      - file.name
+      - estado_tienda
+      - categoria

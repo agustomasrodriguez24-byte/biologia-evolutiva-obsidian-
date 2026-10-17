@@ -1,0 +1,39 @@
+{
+ "nodes": [
+  {
+   "id": "n191",
+   "type": "text",
+   "text": "# Cada síntoma tiene una causa\n\nUn síntoma es tu cuerpo gritándote: no me trates mal.",
+   "x": -260,
+   "y": -110,
+   "width": 520,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n192",
+   "type": "text",
+   "text": "## Cómo ven cada enfermedad\n*Los maestros*\n\nLo que dicen ellos de cada cuadro, con sus palabras. Para ellos, todo vuelve a la causa real.",
+   "x": -260,
+   "y": -420,
+   "width": 520,
+   "height": 220
+  },
+  {
+   "id": "n193",
+   "type": "text",
+   "text": "## Cuadro por cuadro\n\n| Cuadro | Cómo lo explican | Qué hacen | Quién |\n|---|---|---|---|\n| Diabetes tipo 2 | Agotamiento por carbohidratos desde chico | Quitar carbohidratos, ayunar, frío, sol | Duarte, Bayter, Bola, Sanagustín |\n| Corazón | Azúcar + aceites de semillas; el colesterol es el bombero | Fuera azúcar y aceites, grasa buena | Nutrillermo, Duarte, Bayter |\n| Presión alta | Exceso de líquido; el azúcar retiene sodio | Proporción de sal, sin azúcar | Duarte, Endika, Sanagustín |\n| Gastritis y colitis | No es 'nerviosa': es comida y flora | Fuera pan, pasta, harinas y lácteos; vinagre, queso azul | Duarte |\n| Piel | Espejo del intestino y del hígado | Dieta, descansar el hígado, sudar | Duarte |\n| Tiroides | Exceso de agua; antígenos de lácteos y harinas | Sal, fuera lácteos y harinas | Duarte |\n| Ansiedad y pánico | Hipoglucemias: bajón del azúcar o falta de sal | Desayuno salado, sal | Duarte, Nutrillermo |\n| Fibromialgia | Intoxicación crónica de agua | Subir la conductividad | Duarte |\n| Insomnio | Comer de noche, luz artificial, poco movimiento | Sin cena, oscuridad, ejercicio | Duarte, Nutrillermo |\n| Sobrepeso | Hormonal, no calórico; primero sale 'peso agua' | Fuera azúcar y harinas, horarios, sol | Nutrillermo, Duarte |\n| Alzheimer | 'Diabetes tipo 3' | Sin carbohidratos, grasa | Bayter, Duarte |\n| Autoinmunes | Antígenos de comida pegados a las células | Fuera lácteos y harinas | Duarte |\n| Depresión | Falta de proteína animal; pérdida de territorio | Proteína, movimiento, sol | Bayter, Sanagustín, Marcos |\n| Hígado graso | Fructosa y bebidas azucaradas | Fuera bebidas dulces, ayuno | Nutrillermo, Bola |",
+   "x": -550,
+   "y": 260,
+   "width": 1100,
+   "height": 708
+  }
+ ],
+ "edges": [
+  {
+   "id": "e194",
+   "fromNode": "n191",
+   "toNode": "n193"
+  }
+ ]
+}

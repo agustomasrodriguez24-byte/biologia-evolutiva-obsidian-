@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- MUESTRARIO: todos los elementos del estilo en un carrusel de ejemplo (paleta por defecto).
+     Es una muestra de diseño: NO se publica. Sirve para ver cómo quedan tus colores y tu logo
+     después de correr aplicar-marca.py, y para copiar el HTML de cada elemento. -->
+<html lang="es"><head><meta charset="utf-8"><title>Muestra · elementos</title>
+<link rel="stylesheet" href="../../../../../.claude/skills/carrusel/base.css"></head>
+<body class="paleta-principal">
+
+<!-- 1 · Portada: kicker + sticker encima + título enorme + círculo de luz -->
+<section class="slide">
+  <div class="luz"></div>
+  <div class="cuerpo">
+    <span class="kicker">Antes de empezar</span>
+    <span class="sticker encima">la 3 casi nadie</span>
+    <h1 class="xl">3 cosas que <span class="resalta">cambian todo.</span></h1>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div><div class="deslizar">deslizá</div></div>
+</section>
+
+<!-- 2 · Segundo gancho: texto + marcador -->
+<section class="slide">
+  <div class="cuerpo">
+    <h2>La mitad del problema <span class="resalta">se resuelve acá.</span></h2>
+    <p class="suave">Una línea de apoyo, corta, que explica por qué importa.</p>
+    <p>Y es lo único que <span class="marcador">depende de vos.</span></p>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 3 · Paso a mano + filas con recuadro -->
+<section class="slide">
+  <div class="cuerpo" style="margin-top:20px">
+    <span class="mano grande resalta">Paso #01</span>
+    <h3 style="font-size:30px;margin-top:-8px">El primer paso</h3>
+    <div class="filas" style="margin-top:30px">
+      <div class="fila"><span class="recuadro">Qué</span><p>Lo que se hace, en una frase concreta.</p></div>
+      <div class="fila"><span class="recuadro">Cómo</span><p>El detalle que lo hace funcionar.</p></div>
+      <div class="fila"><span class="recuadro">Cuándo</span><p>El momento justo.</p></div>
+    </div>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 4 · Lámina clara con foto a media lámina + pasos con nota a mano -->
+<section class="slide clara">
+  <div class="foto-mitad" style="height:270px"><img src="../img/foto-horizontal.jpg" alt=""></div>
+  <div class="cuerpo" style="gap:12px">
+    <span class="mano grande resalta" style="font-size:60px">Paso #02</span>
+    <h3 style="font-size:28px;margin-top:-8px">Con una foto real</h3>
+    <ol class="pasos">
+      <li>Primero esto. <em>acá es donde casi todos se apuran</em></li>
+      <li>Después esto otro.</li>
+    </ol>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 5 · Casillas + barra de aviso -->
+<section class="slide">
+  <div class="luz abajo"></div>
+  <div class="cuerpo">
+    <span class="mano grande resalta">Paso #03</span>
+    <h3 style="font-size:30px;margin-top:-8px">Lo que tenés que tener</h3>
+    <ul class="check">
+      <li>Primer ítem de la lista</li>
+      <li>Segundo ítem, igual de corto</li>
+      <li>Tercero, y no más de seis</li>
+    </ul>
+    <div class="barra">Lo que no se puede saltear, en una línea.</div>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 6 · Número enorme -->
+<section class="slide clara">
+  <div class="cuerpo">
+    <div class="cifra">7 de 10</div>
+    <h2>Un dato que sorprende, <span class="resalta">con su fuente.</span></h2>
+    <p class="chico">Fuente: de dónde sale, fecha de consulta.</p>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<!-- 7 · Cierre de golpe: UN solo CTA -->
+<section class="slide golpe">
+  <div class="cuerpo">
+    <span class="insignia" style="align-self:flex-start">3</span>
+    <h2 style="font-size:50px">¿Cuál de las tres te cuesta <span class="subrayado">más</span>?</h2>
+    <span class="boton wa">WhatsApp 000 000 000</span>
+  </div>
+  <div class="firma"><div class="iso"></div><div><b>@tucuenta</b><span>Lo que hacés</span></div></div>
+</section>
+
+<script>const l=[...document.querySelectorAll('.slide')];const s=Number(new URLSearchParams(location.search).get('s'));if(s){document.body.classList.add('solo');l[s-1]?.classList.add('activa');}</script>
+</body></html>

@@ -1,0 +1,44 @@
+/* GENERADO por aplicar-marca.py desde Empresa/Marca/marca.json. No se edita a mano. */
+:root {
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Switzer', sans-serif;
+  --mk-tinta-oscura: #14110c;
+  --mk-whatsapp: #25d366;
+  --radius-card: 22px;
+}
+body {
+  --f-titulo: 'Instrument Serif', var(--font-body); --f-texto: 'Switzer', var(--font-body);
+  --f-frase: 'Bricolage Grotesque', 'Instrument Serif', sans-serif; --f-marca: var(--font-display);
+  --f-mano: 'Caveat', cursive; --f-serif: 'Instrument Serif', serif;
+  --logo-oscuro: url("../../../Empresa/Marca/logos/logo-fondo-oscuro.png");
+  --logo-claro: url("../../../Empresa/Marca/logos/logo-fondo-claro.png");
+}
+/* Paletas: paleta-principal · paleta-alterna · paleta-clara · paleta-noche. La primera es la de por defecto */
+body, body.paleta-principal {
+  /* base */  --b-fondo: #0f0e0c; --b-tinta: #efe6d2; --b-suave: rgba(239,230,210,0.8); --b-acento: #c9a24a; --b-linea: rgba(239,230,210,0.25);
+  /* clara */ --c-fondo: #f3ede1; --c-tinta: #1a1712; --c-suave: rgba(26,23,18,0.78); --c-acento: #7d5f22; --c-linea: rgba(26,23,18,0.2);
+  /* golpe */ --g-fondo: #c9a24a; --g-tinta: #0f0e0c; --g-suave: rgba(15,14,12,0.85); --g-acento: #0f0e0c; --g-linea: rgba(15,14,12,0.3);
+  --b-logo: var(--logo-oscuro); --c-logo: var(--logo-claro); --g-logo: var(--logo-claro);
+}
+
+body.paleta-alterna {
+  /* base */  --b-fondo: #14271b; --b-tinta: #efe6d2; --b-suave: rgba(239,230,210,0.8); --b-acento: #c9a24a; --b-linea: rgba(239,230,210,0.25);
+  /* clara */ --c-fondo: #ece5d5; --c-tinta: #14271b; --c-suave: rgba(20,39,27,0.78); --c-acento: #3d6630; --c-linea: rgba(20,39,27,0.2);
+  /* golpe */ --g-fondo: #c9a24a; --g-tinta: #14271b; --g-suave: rgba(20,39,27,0.85); --g-acento: #14271b; --g-linea: rgba(20,39,27,0.3);
+  --b-logo: var(--logo-oscuro); --c-logo: var(--logo-claro); --g-logo: var(--logo-claro);
+}
+
+body.paleta-clara {
+  /* base */  --b-fondo: #f3ede1; --b-tinta: #1a1712; --b-suave: rgba(26,23,18,0.8); --b-acento: #7d5f22; --b-linea: rgba(26,23,18,0.25);
+  /* clara */ --c-fondo: #fbf8f1; --c-tinta: #1a1712; --c-suave: rgba(26,23,18,0.78); --c-acento: #7d5f22; --c-linea: rgba(26,23,18,0.2);
+  /* golpe */ --g-fondo: #0f0e0c; --g-tinta: #e2c886; --g-suave: rgba(226,200,134,0.85); --g-acento: #e2c886; --g-linea: rgba(226,200,134,0.3);
+  --b-logo: var(--logo-claro); --c-logo: var(--logo-claro); --g-logo: var(--logo-oscuro);
+}
+
+body.paleta-noche {
+  /* base */  --b-fondo: #070706; --b-tinta: #e9e1cf; --b-suave: rgba(233,225,207,0.8); --b-acento: #b8923f; --b-linea: rgba(233,225,207,0.25);
+  /* clara */ --c-fondo: #ece5d5; --c-tinta: #1a1712; --c-suave: rgba(26,23,18,0.78); --c-acento: #7d5f22; --c-linea: rgba(26,23,18,0.2);
+  /* golpe */ --g-fondo: #b8923f; --g-tinta: #070706; --g-suave: rgba(7,7,6,0.85); --g-acento: #070706; --g-linea: rgba(7,7,6,0.3);
+  --b-logo: var(--logo-oscuro); --c-logo: var(--logo-claro); --g-logo: var(--logo-oscuro);
+}
+
